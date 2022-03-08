@@ -15,6 +15,7 @@ public class CitizenAI : MonoBehaviour
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        currentTarget = 1;
     }
 
     // Update is called once per frame
@@ -34,28 +35,29 @@ public class CitizenAI : MonoBehaviour
 
         if (distance < 1.0f)
         {
-            if (reverse == true)
+            if(reverse == true)
             {
-                currentTarget--; //reversing
+                currentTarget--;
 
-                if (currentTarget == 0) // if no more current target = begining
+                if(currentTarget == 0)
                 {
                     reverse = false;
                     currentTarget = 0;
                 }
             }
-
-            else if (reverse == false)
+            else
             {
-                currentTarget++; // incrementing 
+                currentTarget++;
 
-                if (currentTarget == waypoints.Count - 1) // at the end of list? 
+                 if (currentTarget == waypoints.Count) //at the end
                 {
                     reverse = true;
                     currentTarget--;
                 }
             }
+       
         }
+
     }
        
 }
