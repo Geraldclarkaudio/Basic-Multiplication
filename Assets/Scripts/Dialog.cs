@@ -18,11 +18,16 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         public TextMeshProUGUI textComponent;
 
         private float canProceed = -1;
-        private float textRate = 0f; //forces text to wait 4 seconds
+        private float textRate = 3.5f; //forces text to wait 3.5 seconds
 
         public GameObject mouseClickAnim;
         public GameObject captainCarla;
         public GameObject scion;
+        public GameObject homeBaseButton;
+
+        private Animator carlaAnim;
+
+        public GameObject dialogBox;
 
         // Start is called before the first frame update
         void Start()
@@ -42,6 +47,21 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             {
                 captainCarla.SetActive(true);
                 scion.SetActive(false);
+
+                if (index == 8)
+                {
+                    carlaAnim = GameObject.Find("Captain Carla").GetComponent<Animator>();
+                    carlaAnim.SetTrigger("LetsGo");
+
+                    captainCarla.transform.position = new Vector3(-655.37f, -550, -942);
+
+                    if(Input.GetMouseButtonDown(0) && Time.time > canProceed)
+                    {
+                        canProceed = Time.time + 1;
+                        homeBaseButton.SetActive(true);
+                        dialogBox.SetActive(false);
+                    }
+                }
             }
 
             if(index == 6 || index == 7)
