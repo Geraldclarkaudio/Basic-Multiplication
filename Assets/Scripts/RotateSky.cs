@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateSky : MonoBehaviour
+namespace PaperKiteStudios.MultiplicationMastermind
 {
-    private float rotateSpeed = 0.5f;
-
-    // Update is called once per frame
-    void Update()
+    public class RotateSky : MonoBehaviour
     {
-        RenderSettings.skybox.SetFloat("_Rotation", Time.time * - rotateSpeed);
+        private float rotateSpeed = 0.5f;
+
+        // Update is called once per frame
+        void Update()
+        {
+            RenderSettings.skybox.SetFloat("_Rotation", Time.time * -rotateSpeed);
+        }
     }
 }

@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetRotation : MonoBehaviour
+namespace PaperKiteStudios.MultiplicationMastermind
 {
-    private float _speed = 10f;
-
-    [SerializeField]
-    private Vector3 directionToRotate;
-
-    // Update is called once per frame
-    void Update()
+    public class PlanetRotation : MonoBehaviour
     {
-        transform.Rotate(directionToRotate * _speed  * Time.deltaTime); 
+        private float _speed = 10f;
+
+        [SerializeField]
+        private Vector3 directionToRotate;
+
+        // Update is called once per frame
+        void Update()
+        {
+            transform.Rotate(directionToRotate * _speed * Time.deltaTime);
+        }
     }
 }

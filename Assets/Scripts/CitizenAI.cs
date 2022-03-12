@@ -3,61 +3,65 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CitizenAI : MonoBehaviour
+namespace PaperKiteStudios.MultiplicationMastermind
 {
-    private NavMeshAgent _agent;
-    [SerializeField]
-    private List<Transform> waypoints;
-    public bool reverse = false;
-    public int currentTarget;
 
-    // Start is called before the first frame update
-    void Start()
+    public class CitizenAI : MonoBehaviour
     {
-        _agent = GetComponent<NavMeshAgent>();
-        currentTarget = 1;
-    }
+        private NavMeshAgent _agent;
+        [SerializeField]
+        private List<Transform> waypoints;
+        public bool reverse = false;
+        public int currentTarget;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Movement();
-    }
-
-    private void Movement()
-    {
-        if(waypoints.Count > 0 && waypoints[currentTarget] != null)
+        // Start is called before the first frame update
+        void Start()
         {
-            _agent.SetDestination(waypoints[currentTarget].position);
+            _agent = GetComponent<NavMeshAgent>();
+            currentTarget = 1;
         }
 
-        float distance = Vector3.Distance(transform.position, waypoints[currentTarget].position);
-
-        if (distance < 1.0f)
+        // Update is called once per frame
+        void Update()
         {
-            if(reverse == true)
-            {
-                currentTarget--;
+            Movement();
+        }
 
-                if(currentTarget == 0)
-                {
-                    reverse = false;
-                    currentTarget = 0;
-                }
+        private void Movement()
+        {
+            if (waypoints.Count > 0 && waypoints[currentTarget] != null)
+            {
+                _agent.SetDestination(waypoints[currentTarget].position);
             }
-            else
-            {
-                currentTarget++;
 
-                 if (currentTarget == waypoints.Count) //at the end
+            float distance = Vector3.Distance(transform.position, waypoints[currentTarget].position);
+
+            if (distance < 1.0f)
+            {
+                if (reverse == true)
                 {
-                    reverse = true;
                     currentTarget--;
+
+                    if (currentTarget == 0)
+                    {
+                        reverse = false;
+                        currentTarget = 0;
+                    }
                 }
+                else
+                {
+                    currentTarget++;
+
+                    if (currentTarget == waypoints.Count) //at the end
+                    {
+                        reverse = true;
+                        currentTarget--;
+                    }
+                }
+
             }
-       
+
         }
 
     }
-       
 }
