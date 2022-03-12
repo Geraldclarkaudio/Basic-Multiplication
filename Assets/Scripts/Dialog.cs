@@ -28,7 +28,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
-            i = lines[index].IndexOf(lines[index]);
+            
 
             StartDialogue();
         }
@@ -36,12 +36,27 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         // Update is called once per frame
         void Update()
         {
+            Debug.Log("index is " + index);
+
+            if(index >= 0 && index <= 5 || index == 8)
+            {
+                captainCarla.SetActive(true);
+                scion.SetActive(false);
+            }
+
+            if(index == 6 || index == 7)
+            {
+                scion.SetActive(true);
+                captainCarla.SetActive(false);
+            }
+
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
                     NextLine();
+                    
                     canProceed = Time.time + textRate;
                 }
                 else
@@ -57,18 +72,6 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             else if (Time.time < canProceed)
             {
                 mouseClickAnim.SetActive(false);
-            }
-            
-            if (i >= 0 && i <= 5)
-            {
-                captainCarla.SetActive(true);
-                scion.SetActive(false);
-            }
-            
-            else if(i == 6 || i == 7)
-            {
-                captainCarla.SetActive(false);
-                scion.SetActive(true);
             }
         }
 
