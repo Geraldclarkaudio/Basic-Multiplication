@@ -16,8 +16,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
         private int i;
         public TextMeshProUGUI textComponent;
 
-        public TextMeshProUGUI cargoShipComponent;
-
         private float canProceed = -1;
         private float textRate = 3.5f;
 
@@ -43,7 +41,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 {
                     planetSelectionUI.SetActive(true);
                     dialogBox.SetActive(false);
-                   
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))

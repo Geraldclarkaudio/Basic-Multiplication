@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeBase.unity
     guid: c9a70cd60f0637549ad744b7708c425b
+  - enabled: 1
+    path: Assets/Scenes/CargoShipScene.unity
+    guid: 35d244375c7573a44bee95c1c7da2f6f
   m_configObjects: {}
