@@ -20,17 +20,27 @@ namespace PaperKiteStudios.MultiplicationMastermind
         private float textRate = 3.5f;
 
         public GameObject mouseClickAnim;
-        public GameObject dialogBox;
+        public GameObject dialogPanel;
         public GameObject avatar;
+        public GameObject dialogBox;
+        public GameObject welcomeBackBox;
 
         public GameObject planetSelectionUI; 
 
         private void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
-            StartDialogue();
+            StartDialogue();     
+            
+            if(GameManager.Instance.cargoShipHelped == true)
+            {
+                welcomeBackBox.SetActive(true);
+            }
+            else if(GameManager.Instance.cargoShipHelped == false)
+            {
+                dialogBox.SetActive(true);
+            }
 
-           
         }
 
         private void Update()
@@ -40,7 +50,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 if(index == 2)
                 {
                     planetSelectionUI.SetActive(true);
-                    dialogBox.SetActive(false);
+                    dialogPanel.SetActive(false);
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))

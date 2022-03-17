@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
@@ -23,13 +24,15 @@ namespace PaperKiteStudios.MultiplicationMastermind
         private GameObject answerQuestionUI;
 
         [SerializeField]
-        private GameObject corectAnswerDialogBox; 
+        private GameObject corectAnswerDialogBox;
+
+        private Scene activeScene;
 
         private void Start()
         {
             //reactantAdd = GameObject.Find("Reactant_Zone").GetComponent<ReactantAdd>();
             canDrop = true;
-            
+            SceneManager.GetActiveScene();
         }
         public void OnDrop(PointerEventData eventData)
         {
@@ -45,21 +48,23 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     {
                         ogPos = eventData.pointerDrag.GetComponent<DragDrop>();
                         Debug.Log("WRONG");
-                        canDrop = true;
-
-                        eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = ogPos.originalPosition;
-
-                        //Make Alien Dialog Box Pop up and reiterate the point. 
+                        
                         wrongAnswerPanel.SetActive(true);
+                        eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = ogPos.originalPosition; 
+                        canDrop = true;
 
                         return;
                     }
-                    else
+                    else // CORRECT ANSWER
                     {
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
                         Debug.Log("Dropped" + eventData.pointerDrag.name);
                         eventData.pointerDrag.GetComponent<DragDrop>().enabled = false;
-
+                        
+                        if(SceneManager.GetActiveScene().name == "CargoShipScene")
+                        {
+                            GameManager.Instance.cargoShipHelped = true;
+                        }
                     }
 
                 }

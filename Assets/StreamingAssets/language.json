@@ -30,8 +30,10 @@
 		"cargoShipCorrect1": "Thank you for helping us! We heard the Scion stole from your home planet. We want you to have these to say thank you.",
 		"resourcesReceived1": "5,000 pencils obtained!",
 		"backToBase": "Back To Home Base",
-		"repeatAdditionInstructions": "Drag the correct equation to the empty slot below. Which equation is the repeated addition equation for 4 X 2 = 8?"
-
+		"repeatAdditionInstructions": "Drag the correct equation to the empty slot below. Which equation is the repeated addition equation for 4 X 2 = 8?",
+		"welcomeBackToBase1": "Welcome back recruit. You did awesome out there.",
+		"welcomeBackToBase2": "We got pencils from the cargo ship. Maybe we can catch the Scion and teach it multiplication!",
+		"welcomeBackToBase3": "Lets get some more supplies from the other 2 planets. Lets go!"
 
 
 
