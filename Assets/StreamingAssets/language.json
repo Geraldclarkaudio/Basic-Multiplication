@@ -25,11 +25,12 @@
 		"cargoShip8": "4 X 2 = 8 is the exact same thing as saying 4 groups of 2 is a total of 8.",
 		"cargoShip9": "Using this approach, which equation is the repeated addition equation for 4 X 2 = 8?",
 		"cargoShipCorrect": "Precisely! We need 2 fuel tanks 4 times!",
-		"cargoShipIncorrect": "Not Quite. Remeber, 4 X 2 = 8 also means 4 groups of 2 = 8. Which equation shows four groups of 2 fuel cans?",
-		"cargoShip10": "Thank you for helping us! We heard the Scion stole from your home planet. We were actually on our way there to provide assistance.",
-		"cargoShip11": "Since you're already here, you can take these back to your planet.",
+		"cargoShipIncorrect": "Not Quite. Remeber, 4 X 2 = 8 also means 4 groups of 2 = 8.",
+		"cargoShipIncorrect1": "Which equation shows four groups of 2 fuel cans?",
+		"cargoShipCorrect1": "Thank you for helping us! We heard the Scion stole from your home planet. We want you to have these to say thank you.",
 		"resourcesReceived1": "5,000 pencils obtained!",
-		"backToBase": "Back To Home Base"
+		"backToBase": "Back To Home Base",
+		"repeatAdditionInstructions": "Drag the correct equation to the empty slot below. Which equation is the repeated addition equation for 4 X 2 = 8?"
 
 
 

@@ -16,7 +16,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public TextMeshProUGUI textComponent;
 
         private float canProceed = -1;
-        private float textRate = 0f;
+        private float textRate = 3.5f;
 
         public GameObject mouseClickAnim;
         public GameObject dialogBox;
@@ -37,13 +37,17 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
+                if(index == 5)
+                {
+                    mouseClickAnim.SetActive(false);
+                }
                 //dialogBox1
                 if (index == 6)//DIALOG SECTION CUSTOMIZATION
                 {
                     //Show Multiplicative Sentence
-
+                    //mouseClickAnim.SetActive(false);
                     dialogBox.SetActive(false);
-                    mouseClickAnim.SetActive(false);
+                    
 
                     multiplicativeSentence.SetActive(true);
                 }

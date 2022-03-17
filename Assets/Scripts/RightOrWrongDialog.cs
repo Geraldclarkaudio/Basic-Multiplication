@@ -8,7 +8,7 @@ using TMPro;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class CargoShipDialog2 : MonoBehaviour
+    public class RightOrWrongDialog : MonoBehaviour
     {
         private Initializer init;
         public string[] lines;
@@ -19,16 +19,13 @@ namespace PaperKiteStudios.MultiplicationMastermind
         private float textRate = 3.5f;
 
         public GameObject mouseClickAnim;
-        public GameObject dialogBox;
-        public GameObject alien;
 
-        public GameObject answerQuestionUI;
+        public GameObject dialogBox;
 
         private void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
             StartDialogue();
-
         }
 
         private void Update()
@@ -38,13 +35,10 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 //dialogBox2
                 if (index == 1)//DIALOG SECTION CUSTOMIZATION
                 {
-                    //Show Answer Question UI
-
-                    dialogBox.SetActive(false);
+                    
                     mouseClickAnim.SetActive(false);
-                    alien.SetActive(false);
-
-                    answerQuestionUI.SetActive(true);
+                    
+                    dialogBox.SetActive(false);
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))
