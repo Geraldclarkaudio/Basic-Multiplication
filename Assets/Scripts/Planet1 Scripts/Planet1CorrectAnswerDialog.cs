@@ -28,7 +28,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
             StartDialogue();
-
+            director.SetActive(true);
+            alien.SetActive(true);
         }
 
         private void Update()
@@ -38,12 +39,9 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 //dialogBox2
                 if (index == 5)//DIALOG SECTION CUSTOMIZATION
                 {
-                    //Show Answer Question UI
                     mouseClickAnim.SetActive(false);
                     alien.SetActive(false);
-                    director.SetActive(true);
-                    StartCoroutine(ShowAnswerUI());
-
+                    dialogBox.SetActive(false);
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))
@@ -83,16 +81,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 textComponent.text = init.GetText(lines[index]);
                 LOLSDK.Instance.SpeakText(lines[index]);
             }
-        }
-
-        IEnumerator ShowAnswerUI()
-        {
-            yield return new WaitForSeconds(4.0f);
-            answerQuestionUI.SetActive(true);
-            dialogBox.SetActive(false);
-
-            //Camera.main.transform.position = cam2.transform.position;
-
         }
     }
 }

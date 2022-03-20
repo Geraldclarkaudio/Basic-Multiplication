@@ -44,7 +44,12 @@
 		"wrongAnswerDialogP1": "Hmm. Not exactly. Remember, we have 5 families here with 5 members each.",
 		"wrongAnswerDialogP2": "We need 25 toothbrushes. We can look at this problem like this.",
 		"wrongAnswerDialogP3": "There are 5 groups of people with 5 people per group.",
-		"wrongAnswerDialogP4": "Which mulitiplicative sentence makes the most sense in this situation?"
+		"wrongAnswerDialogP4": "Which mulitiplicative sentence makes the most sense in this situation?",
+		"correctAnswerDialogP1": "Exactly! 5 X 5 means there are 5 groups of 5!",
+		"correctAnswerDialogP2": "An easy way to remember that is to think of the multiplication symbol as meaning 'groups of'.",
+		"correctAnswerDialogP3": "You did great! Thanks again. Now we can all go back to keeping or teeth nice and sharp and clean!,",
+		"correctAnswerDialogP4": "I want you to have this paper. I heard the Scion came and took all your planet's multiplication resources.",
+		"correctAnswerDialogP5": "I know it isn't much, but I think you could put this paper to better use than we can."
 
 
 
