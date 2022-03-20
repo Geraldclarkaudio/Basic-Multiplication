@@ -47,10 +47,19 @@
 		"wrongAnswerDialogP4": "Which mulitiplicative sentence makes the most sense in this situation?",
 		"correctAnswerDialogP1": "Exactly! 5 X 5 means there are 5 groups of 5!",
 		"correctAnswerDialogP2": "An easy way to remember that is to think of the multiplication symbol as meaning 'groups of'.",
-		"correctAnswerDialogP3": "You did great! Thanks again. Now we can all go back to keeping or teeth nice and sharp and clean!,",
+		"correctAnswerDialogP3": "You did great! Thanks again. Now we can all go back to keeping or teeth nice and sharp and clean!",
 		"correctAnswerDialogP4": "I want you to have this paper. I heard the Scion came and took all your planet's multiplication resources.",
 		"correctAnswerDialogP5": "I know it isn't much, but I think you could put this paper to better use than we can.",
-		"paperObtained":"5,000 pieces of paper obtained!"
+		"paperObtained": "5,000 pieces of paper obtained!",
+		"welcomeBackToBase4": "Awesome work! Now we have pencils and paper.",
+		"welcomeBackToBase5": "Now all we need to do is catch that Scion and teach him how to multiply!",
+		"welcomeBackToBase6": "Lets check out Planet 2 and see what they need! Surely Emilia has some ideas on how we can catch him.",
+		"emiliaIntro1": "Hiya! The name is Emilia. Yes. Like Emilia Earhart, but the space version.",
+		"emiliaIntro2": "Yea Yea yea, the Scion came here too. They didn't steal anything though.",
+		"emiliaIntro3": "They just trashed my planet and left! I hear you're looking to catch him.",
+		"emiliaIntro4": "Well, you may be in luck. All the trash he left could easily be used to build a spaceship.",
+		"emiliaIntro5": "Lets get to work!"
+
 
 
 

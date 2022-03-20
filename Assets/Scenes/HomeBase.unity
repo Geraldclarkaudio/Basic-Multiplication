@@ -2143,12 +2143,14 @@ MonoBehaviour:
   - welcomeBackToBase1
   - welcomeBackToBase2
   - welcomeBackToBase3
+  - welcomeBackToBase4
+  - welcomeBackToBase5
+  - welcomeBackToBase6
   textComponent: {fileID: 1898088225}
   mouseClickAnim: {fileID: 2103731714}
   dialogPanel: {fileID: 1694598231}
   avatar: {fileID: 147721421}
   dialogBox: {fileID: 1872485323}
-  welcomeBackBox: {fileID: 0}
   planetSelectionUI: {fileID: 1786082398}
 --- !u!1 &1786082398
 GameObject:

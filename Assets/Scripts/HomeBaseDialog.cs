@@ -23,43 +23,63 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject dialogPanel;
         public GameObject avatar;
         public GameObject dialogBox;
-        public GameObject welcomeBackBox;
 
         public GameObject planetSelectionUI; 
 
         private void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
-            StartDialogue();     
-            
-            if(GameManager.Instance.cargoShipHelped == true)
-            {
-                //display welcome back text
-                index = 3;
-            }
-            
-            if(GameManager.Instance.cargoShipHelped == false)
+            StartDialogue();
+
+            if (GameManager.Instance.cargoShipHelped == false) // beginning of game
             {
                 index = 0;
             }
 
+            if (GameManager.Instance.cargoShipHelped == true) // Cargo Ship Helped only. 
+            {
+                //display welcome back text
+                index = 3;
+            }
+            if(GameManager.Instance.planet1Helped == true && GameManager.Instance.planet2Helped == false)//HELPED PLANET 1 and NOT PLANET 2 Yet
+            {
+                index = 6;
+            }
+            if (GameManager.Instance.planet2Helped == true && GameManager.Instance.planet1Helped == false)//HELPED PLANET 2 BUT NOT 1
+            {
+                index = 9;
+            }
+
+            if (GameManager.Instance.planet2Helped == true && GameManager.Instance.planet1Helped == true)//HELPED Both
+            {
+                //index is wherever the LETS GO FIGHT THE SCION dialog starts. 
+            }
+
         }
 
-        private void Update()
+            private void Update()
         {
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
-                if(index == 2)
+                if(index == 2) // end of intro dialog
                 {
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
                 }
 
-                if(index == 5)
+                if(index == 5) //enf of cargoship dialog
                 {
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
                 }
+
+                if(index == 8) // end of post planet 1 dialog
+                {
+                    planetSelectionUI.SetActive(true);
+                    dialogPanel.SetActive(false);
+                }
+
+                //NEDD PLANET 2 DIALOG
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
