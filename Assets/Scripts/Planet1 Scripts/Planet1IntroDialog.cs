@@ -93,7 +93,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             answerQuestionUI.SetActive(true);
             dialogBox.SetActive(false);
 
-            Camera.main.transform.position = cam2.transform.position;
+            //Camera.main.transform.position = cam2.transform.position;
 
         }
     }

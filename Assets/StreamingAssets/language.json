@@ -40,7 +40,11 @@
 		"planet1intro4": "We have 5 families here. Each family has 5 members, so therefore, the Scion stole 25 toothbrushes.",
 		"planet1intro5": "You could also say that we need 5 groups of 5 toothbrushes.",
 		"planet1intro6": "Can you tell me which of these multiplicative sentences means 5 groups of 5 toothbrushes?",
-		"planet1instructionalpanel": "Which of the following best illustrates that 5 groups of 5 = 25 total toothbrushes?"
+		"planet1instructionalpanel": "Which of the following best illustrates that 5 groups of 5 = 25 total toothbrushes?",
+		"wrongAnswerDialogP1": "Hmm. Not exactly. Remember, we have 5 families here with 5 members each.",
+		"wrongAnswerDialogP2": "We need 25 toothbrushes. We can look at this problem like this.",
+		"wrongAnswerDialogP3": "There are 5 groups of people with 5 people per group.",
+		"wrongAnswerDialogP4": "Which mulitiplicative sentence makes the most sense in this situation?"
 
 
 

@@ -5,11 +5,10 @@ using UnityEngine.UI;
 using SimpleJSON;
 using LoLSDK;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class RightOrWrongDialog : MonoBehaviour
+    public class Planet1CorrectAnswerDialog : MonoBehaviour
     {
         private Initializer init;
         public string[] lines;
@@ -17,47 +16,35 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public TextMeshProUGUI textComponent;
 
         private float canProceed = -1;
-        private float textRate = 3.5f;
+        private float textRate = 0.5f;
 
         public GameObject mouseClickAnim;
-
         public GameObject dialogBox;
+        public GameObject alien;
 
-        public Scene scene;
-
+        public GameObject director;
+        public GameObject cam2;
         private void Start()
         {
-            scene = SceneManager.GetActiveScene();
             init = GameObject.Find("App").GetComponent<Initializer>();
             StartDialogue();
+
         }
 
         private void Update()
         {
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
-                if(scene.name == "Planet1")
+                //dialogBox2
+                if (index == 5)//DIALOG SECTION CUSTOMIZATION
                 {
-                    if(index == 3)
-                    {
-                        mouseClickAnim.SetActive(false);
+                    //Show Answer Question UI
+                    mouseClickAnim.SetActive(false);
+                    alien.SetActive(false);
+                    director.SetActive(true);
+                    StartCoroutine(ShowAnswerUI());
 
-                        dialogBox.SetActive(false);
-                    }
                 }
-
-                if(scene.name == "CargoShipScene")
-                {
-                    //dialogBox2
-                    if (index == 1)//DIALOG SECTION CUSTOMIZATION
-                    {
-
-                        mouseClickAnim.SetActive(false);
-
-                        dialogBox.SetActive(false);
-                    }
-                }
-
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
@@ -96,6 +83,16 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 textComponent.text = init.GetText(lines[index]);
                 LOLSDK.Instance.SpeakText(lines[index]);
             }
+        }
+
+        IEnumerator ShowAnswerUI()
+        {
+            yield return new WaitForSeconds(4.0f);
+            answerQuestionUI.SetActive(true);
+            dialogBox.SetActive(false);
+
+            //Camera.main.transform.position = cam2.transform.position;
+
         }
     }
 }
