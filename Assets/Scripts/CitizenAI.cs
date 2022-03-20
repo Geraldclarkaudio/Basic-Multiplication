@@ -24,7 +24,15 @@ namespace PaperKiteStudios.MultiplicationMastermind
         // Update is called once per frame
         void Update()
         {
-            Movement();
+            if(GameManager.Instance.planet1Helped == false)
+            {
+                Movement();
+            }
+
+            else if(GameManager.Instance.planet1Helped == true)
+            {
+                //set animation to be celebratory
+            }
         }
 
         private void Movement()

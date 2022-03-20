@@ -34,11 +34,13 @@ namespace PaperKiteStudios.MultiplicationMastermind
             
             if(GameManager.Instance.cargoShipHelped == true)
             {
-                welcomeBackBox.SetActive(true);
+                //display welcome back text
+                index = 3;
             }
-            else if(GameManager.Instance.cargoShipHelped == false)
+            
+            if(GameManager.Instance.cargoShipHelped == false)
             {
-                dialogBox.SetActive(true);
+                index = 0;
             }
 
         }
@@ -48,6 +50,12 @@ namespace PaperKiteStudios.MultiplicationMastermind
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
                 if(index == 2)
+                {
+                    planetSelectionUI.SetActive(true);
+                    dialogPanel.SetActive(false);
+                }
+
+                if(index == 5)
                 {
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);

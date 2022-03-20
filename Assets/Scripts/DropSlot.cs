@@ -65,6 +65,11 @@ namespace PaperKiteStudios.MultiplicationMastermind
                         {
                             GameManager.Instance.cargoShipHelped = true;
                         }
+
+                        if(SceneManager.GetActiveScene().name == "Planet1")
+                        {
+                            GameManager.Instance.planet1Helped = true;
+                        }
                     }
 
                 }

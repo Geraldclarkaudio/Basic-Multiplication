@@ -23,7 +23,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject alien;
 
         public GameObject director;
-        public GameObject cam2;
+        
         private void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
@@ -37,7 +37,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
                 //dialogBox2
-                if (index == 5)//DIALOG SECTION CUSTOMIZATION
+                if (index == 4)//DIALOG SECTION CUSTOMIZATION
                 {
                     mouseClickAnim.SetActive(false);
                     alien.SetActive(false);
