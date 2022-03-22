@@ -27,7 +27,15 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         private void Awake()
         {
-            _instance = this;
+            if(_instance != null && _instance != this)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                _instance = this;
+                DontDestroyOnLoad(this.gameObject);
+            }
         }
     }
 }

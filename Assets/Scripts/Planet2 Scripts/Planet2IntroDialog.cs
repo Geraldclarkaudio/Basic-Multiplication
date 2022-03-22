@@ -21,6 +21,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject mouseClickAnim;
         public GameObject dialogBox;
         public GameObject alien;
+        public GameObject goToHangarButton;
 
         private void Start()
         {
@@ -41,7 +42,9 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     mouseClickAnim.SetActive(false);
                     alien.SetActive(false);
                     canProceed = Time.time + 500;
-                    dialogBox.SetActive(false);                 
+                    goToHangarButton.SetActive(true);
+                    dialogBox.SetActive(false);     
+                    
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))

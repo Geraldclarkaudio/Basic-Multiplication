@@ -19,6 +19,20 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
     public class Initializer : MonoBehaviour
     {
+        private static Initializer _instance;
+        public static Initializer Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    Debug.LogError("Initializer is null");
+                }
+
+                return _instance;
+            }
+        }
+
         public bool _init = false;
         WaitForSeconds _feedbackTimer = new WaitForSeconds(2);
         Coroutine _feedbackMethod;
@@ -32,6 +46,15 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         void Awake()
             {
+                if(_instance != null && _instance != this)
+                {
+                Destroy(this.gameObject);
+                }
+                else
+                {
+                _instance = this;
+                DontDestroyOnLoad(this.gameObject);
+                }
 #if UNITY_EDITOR
                 ILOLSDK sdk = new LoLSDK.MockWebGL();
 #elif UNITY_WEBGL
@@ -52,8 +75,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 UnityEditor.EditorGUIUtility.PingObject(this);
                 LoadMockData();
 #endif
-
-            }
+ 
+        }
 
             private void Start()
             {
@@ -68,8 +91,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             IEnumerator WaitToLoad()
             {
                 yield return new WaitUntil(() => _dataCounter >= _totalDataCount);
-                Helper.StateButtonInitialize<PlayerData>(newGameButton, continueButton, onload);
-               
+                Helper.StateButtonInitialize<PlayerData>(newGameButton, continueButton, onload);       
             }
 
             private void OnDestroy()
