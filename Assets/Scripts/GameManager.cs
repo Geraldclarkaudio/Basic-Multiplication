@@ -24,6 +24,15 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public bool planet1Helped { get; set; }
         public bool planet2Helped { get; set; }
 
+        public bool cockpitBuilt { get; set; }
+        public bool bodyBuilt { get; set; }
+        public bool enginesBuilt { get; set; }
+        public bool wingsBuilt { get; set; }
+
+
+
+
+
 
         private void Awake()
         {
