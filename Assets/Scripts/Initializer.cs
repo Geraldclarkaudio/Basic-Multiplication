@@ -26,13 +26,11 @@ namespace PaperKiteStudios.MultiplicationMastermind
             {
                 if (_instance == null)
                 {
-                    Debug.LogError("Initializer is null");
+                    Debug.LogError("GameManager is null");
                 }
-
                 return _instance;
             }
         }
-
         public bool _init = false;
         WaitForSeconds _feedbackTimer = new WaitForSeconds(2);
         Coroutine _feedbackMethod;
@@ -46,17 +44,18 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         void Awake()
             {
-                if(_instance != null && _instance != this)
-                {
+
+            if (_instance != null && _instance != this)
+            {
                 Destroy(this.gameObject);
-                }
-                else
-                {
+            }
+            else
+            {
                 _instance = this;
                 DontDestroyOnLoad(this.gameObject);
-                }
+            }
 #if UNITY_EDITOR
-                ILOLSDK sdk = new LoLSDK.MockWebGL();
+            ILOLSDK sdk = new LoLSDK.MockWebGL();
 #elif UNITY_WEBGL
 		    ILOLSDK sdk = new LoLSDK.WebGL();
 #elif UNITY_IOS || UNITY_ANDROID
@@ -85,7 +84,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
             private void Update()
             {
-                Debug.Log(playerData.level);
+                Debug.Log("PLAYERDATA.LEVEL = " + playerData.level);
             }
 
             IEnumerator WaitToLoad()
@@ -178,19 +177,19 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 if (playerData.level == 3)
                 {
                     loadedPlayerData.level = 3;
-                    SceneManager.LoadScene("");
+                    SceneManager.LoadScene("CargoShipScene");
                     Save();
                 }
                 if (playerData.level == 4)
                 {
                     loadedPlayerData.level = 4;
-                    SceneManager.LoadScene("");
+                    SceneManager.LoadScene("Planet1");
                     Save();
                 }
                 if (playerData.level == 5)
                 {
                     loadedPlayerData.level = 5;
-                    SceneManager.LoadScene("");
+                    SceneManager.LoadScene("Planet3");
                     Save();
                 }
                 if (playerData.level == 0)
@@ -238,27 +237,47 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 Scene scene = SceneManager.GetActiveScene();
                 //Debug.Log("Active Scene is " + scene.name);
 
-                if (scene.name == "Gas")
+                if (scene.name == "OpeningScene")
                 {
                     playerData.level = 1;
                 }
 
-                if (scene.name == "Cave")
+                if (scene.name == "HomeBase")
+                {
+                if(GameManager.Instance.cargoShipHelped == false)
                 {
                     playerData.level = 2;
                 }
+                    if(GameManager.Instance.cargoShipHelped == true)
+                    {
+                        playerData.level = 4;
+                    }
+                if (GameManager.Instance.planet1Helped == true && GameManager.Instance.planet2Helped == false)
+                {
+                    playerData.level = 7;
+                }
+                    if (GameManager.Instance.planet1Helped == false && GameManager.Instance.planet2Helped == true)
+                    {
+                        playerData.level = 7;
+                    }
+                    if (GameManager.Instance.planet1Helped == true && GameManager.Instance.planet2Helped == true)
+                    {
+                        playerData.level = 8;
+                    }
 
-                if (scene.name == "Rabbit_Rescued")
+                }
+
+                if (scene.name == "CargoShipScene")
                 {
                     playerData.level = 3;
                 }
 
-                if (scene.name == "Bugs_Scene")
+                if (scene.name == "Planet1")
                 {
-                    playerData.level = 4;
+                    playerData.level = 5;
                 }
 
-                if (scene.name == "Stir")
+                if (scene.name == "Planet3")
                 {
                     playerData.level = 5;
                 }

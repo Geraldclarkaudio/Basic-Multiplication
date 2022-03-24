@@ -1,9 +1,15 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using PaperKiteStudios.MultiplicationMastermind;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace LoLSDK
 {
+
     public class Helper
     {
+
         /// <summary>
         /// Helper to handle your required NEW GAME and CONTINUE buttons.
         /// Stops double clicking of buttons and shows the continue button only when needed.
@@ -29,10 +35,13 @@ namespace LoLSDK
             newGameButton.gameObject.SetActive(false);
             continueButton.gameObject.SetActive(false);
             // Check for valid state data, from server or fallback local ( PlayerPrefs )
+
             LOLSDK.Instance.LoadState<T>(state =>
+
             {
                 if (state != null)
                 {
+
                     // Hook up and show continue only if valid data exists.
                     continueButton.onClick.AddListener(() =>
                     {
@@ -43,7 +52,15 @@ namespace LoLSDK
                         LOLSDK.Instance.SubmitProgress(state.score, state.currentProgress, state.maximumProgress);
                     });
 
-                    continueButton.gameObject.SetActive(true);
+                    if (state.currentProgress < 1)
+                    {
+                        continueButton.gameObject.SetActive(false);
+                    }
+                    else if (state.currentProgress >= 1)
+                    {
+                        continueButton.gameObject.SetActive(true);
+                    }
+                    //continueButton.gameObject.SetActive(true);
                 }
 
                 newGameButton.gameObject.SetActive(true);

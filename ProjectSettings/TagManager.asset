@@ -6,6 +6,10 @@ TagManager:
   tags:
   - WrongAnswer
   - CorrectAnswer
+  - Answer1
+  - Answer2
+  - Answer3
+  - Problem1
   layers:
   - Default
   - TransparentFX

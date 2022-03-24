@@ -1,5 +1,7 @@
 {
 	"en": {
+		"newGame": "NEW GAME",
+		"continue": "CONTINUE",
 		"openingScene01": "Hey there recruit! I know you have just completed your training as a Multiplication Mastermind (MM), but we need your help ASAP!",
 		"openingScene02": "Our planet's resources have been pillaged by a greedy robot called a Scion.",
 		"openingScene03": "Scions travel the universe in search of resources to steal because they don't know how to use multiplication!",
