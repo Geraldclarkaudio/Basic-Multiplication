@@ -11,20 +11,45 @@ namespace PaperKiteStudios.MultiplicationMastermind
         static MatchLogic Instance;
 
         public int maxPoints = 3;
-        public TextMeshProUGUI pointsText;
+        public TextMeshProUGUI cockpitPointsText;
+        public TextMeshProUGUI bodyPointsText;
+        public TextMeshProUGUI wingPointsText;
+        public TextMeshProUGUI engineText;
         public GameObject levelCompleted;
         private int points = 0;
 
         [SerializeField]
-        private GameObject shipPart;
-
+        private GameObject shipPart1;
         [SerializeField]
-        private GameObject CockpitQuestionsPanel;
+        private GameObject shipPart2;
+        [SerializeField]
+        private GameObject shipPart3;
+        [SerializeField]
+        private GameObject shipPart4;
+
+
+
         [SerializeField]
         private GameObject navButtons;
 
         [SerializeField]
-        private GameObject transparentShipPart;
+        private GameObject transparentShipPart1;
+        [SerializeField]
+        private GameObject transparentShipPart2;
+        [SerializeField]
+        private GameObject transparentShipPart3;
+        [SerializeField]
+        private GameObject transparentShipPart4;
+
+        [SerializeField]
+        private GameObject questionPanel1;
+        [SerializeField]
+        private GameObject questionPanel2;
+        [SerializeField]
+        private GameObject questionPanel3;
+        [SerializeField]
+        private GameObject questionPanel4;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -33,19 +58,78 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         void UpdatePointsText()
         {
-            pointsText.text = points + "/" + maxPoints;
-            if(points == maxPoints)
+            //COCKPIT::::::::::::::::::::::::::::::::
+            if (questionPanel1.activeSelf == true)
             {
-                levelCompleted.SetActive(true);
                 
-                StartCoroutine(ShipPartEnable());
+                cockpitPointsText.text = points + "/" + maxPoints;
+                if (points == maxPoints)
+                {
+                    points = 0;
+                    levelCompleted.SetActive(true);
+                    GameManager.Instance.cockpitBuilt = true;
+                    StartCoroutine(ShipPartEnable1());
+                    //turn off this question panel
+                   questionPanel1.SetActive(false);
 
-                //turn off this question panel
-                CockpitQuestionsPanel.SetActive(false);
-                GameManager.Instance.cockpitBuilt = true;
-                //turn on the nav buttons
-                navButtons.SetActive(true);
+                    //turn on the nav buttons
+                    navButtons.SetActive(true);
 
+                }
+            }
+            //BODY:::::::::::::::::::::::::::::
+            if (questionPanel2.activeSelf == true)
+            {   
+                bodyPointsText.text = points + "/" + maxPoints;
+                if (points == maxPoints)
+                {
+                    points = 0;
+                    levelCompleted.SetActive(true);
+                    GameManager.Instance.bodyBuilt = true;
+                    StartCoroutine(ShipPartEnable2());
+                    //turn off this question panel
+                    questionPanel2.SetActive(false);
+
+                    //turn on the nav buttons
+                    navButtons.SetActive(true);
+
+                }
+            }
+            //WINGS::::::::::::::::::::::::::::::::::::::::::::::
+            if (questionPanel3.activeSelf == true)
+            {
+                wingPointsText.text = points + "/" + maxPoints;
+                if (points == maxPoints)
+                {
+                    points = 0;
+                    levelCompleted.SetActive(true);
+                    GameManager.Instance.wingsBuilt = true;
+                    StartCoroutine(ShipPartEnable3());
+                    //turn off this question panel
+                    questionPanel3.SetActive(false);
+
+                    //turn on the nav buttons
+                    navButtons.SetActive(true);
+
+                }
+            }
+            //ENGINESSSS::::::::::::
+            if (questionPanel4.activeSelf == true)
+            {
+                engineText.text = points + "/" + maxPoints;
+                if (points == maxPoints)
+                {
+                    points = 0;
+                    levelCompleted.SetActive(true);
+                    GameManager.Instance.enginesBuilt = true;
+                    StartCoroutine(ShipPartEnable4());
+                    //turn off this question panel
+                    questionPanel4.SetActive(false);
+
+                    //turn on the nav buttons
+                    navButtons.SetActive(true);
+
+                }
             }
         }
 
@@ -60,12 +144,36 @@ namespace PaperKiteStudios.MultiplicationMastermind
             Instance.UpdatePointsText();
         }
 
-        IEnumerator ShipPartEnable()
+        IEnumerator ShipPartEnable1()
         {
 
             yield return new WaitForSeconds(1.0f);
-            shipPart.SetActive(true);
-            transparentShipPart.SetActive(false);
+            shipPart1.SetActive(true);
+            transparentShipPart1.SetActive(false);
+            levelCompleted.SetActive(false);
+        }
+        IEnumerator ShipPartEnable2()
+        {
+
+            yield return new WaitForSeconds(1.0f);
+            shipPart2.SetActive(true);
+            transparentShipPart2.SetActive(false);
+            levelCompleted.SetActive(false);
+        }
+        IEnumerator ShipPartEnable3()
+        {
+
+            yield return new WaitForSeconds(1.0f);
+            shipPart3.SetActive(true);
+            transparentShipPart3.SetActive(false);
+            levelCompleted.SetActive(false);
+        }
+        IEnumerator ShipPartEnable4()
+        {
+
+            yield return new WaitForSeconds(1.0f);
+            shipPart4.SetActive(true);
+            transparentShipPart4.SetActive(false);
             levelCompleted.SetActive(false);
         }
     }

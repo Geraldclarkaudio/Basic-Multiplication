@@ -14,17 +14,20 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public bool reverse = false;
         public int currentTarget;
 
+        private Animator _anim;
+
         // Start is called before the first frame update
         void Start()
         {
             _agent = GetComponent<NavMeshAgent>();
             currentTarget = 1;
+            _anim = GetComponent<Animator>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(GameManager.Instance.planet1Helped == false)
+            if(GameManager.Instance. planet1Helped == false)
             {
                 Movement();
             }
@@ -32,6 +35,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             else if(GameManager.Instance.planet1Helped == true)
             {
                 //set animation to be celebratory
+                _anim.SetBool("Helped", true);
             }
         }
 

@@ -21,6 +21,18 @@ namespace PaperKiteStudios.MultiplicationMastermind
             {
                 cockpitButton.enabled = false;
             }
+           if(GameManager.Instance.bodyBuilt == true)
+            {
+                bodyButton.enabled = false;
+            }
+           if(GameManager.Instance.wingsBuilt == true)
+            {
+                wingsButton.enabled = false;
+            }
+            if (GameManager.Instance.enginesBuilt == true)
+            {
+                enginesButton.enabled = false;
+            }
         }
     }
 }
