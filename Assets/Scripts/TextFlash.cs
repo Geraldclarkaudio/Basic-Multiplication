@@ -14,12 +14,6 @@ public class TextFlash : MonoBehaviour
         StartCoroutine(Flicker());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
-
     IEnumerator Flicker()
     {
         while(true)

@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Planet3.unity
     guid: 5b1f4ec79cf12aa41b84d867820d3be7
   - enabled: 1
-    path: Assets/Scenes/SpaceShipBuilder.unity
-    guid: 373781b9ca3b38141940ef23f8a13e0d
+    path: Assets/Scenes/SpaceShipBuilderWithIntro.unity
+    guid: 24ff7dcda0b27844db0fefe081715946
   m_configObjects: {}

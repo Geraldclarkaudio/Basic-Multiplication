@@ -10,6 +10,8 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         private Button cargoShipButton;
         [SerializeField]
         private Button planet1ButtonInteract;
+        [SerializeField]
+        private Button planet2ButtonInteract;
 
         [SerializeField]
         private GameObject planet1Button;
@@ -19,6 +21,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
 
         public GameObject cargoCheckMarkBox;
         public GameObject planet1CheckMarkBox;
+        public GameObject planet2CheckMarkBox;
         public Sprite checkMarkOff;
         public Sprite checkMarkOn;
 
@@ -26,13 +29,14 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         // Start is called before the first frame update
         void Start()
         {
+            
             if (GameManager.Instance.cargoShipHelped == true)
             {
                 //Cant go back to the same scene. 
                 cargoShipButton.interactable = false;
                 //put check mark in the box. 
                 cargoCheckMarkBox.GetComponent<Image>().sprite = checkMarkOn;
-                //set these buttons true now. 
+                //set these buttons true now. Happens once Cargo ship is helped. Stay active throughout the game. 
                 planet1Button.SetActive(true);
                 planet2Button.SetActive(true);
             }
@@ -43,6 +47,12 @@ namespace PaperKiteStudios.MultiplicationMastermind {
                 planet1ButtonInteract.interactable = false;
                 //put check mark 
                 planet1CheckMarkBox.GetComponent<Image>().sprite = checkMarkOn;
+            }
+
+            if(GameManager.Instance.planet2Helped == true)
+            {
+                planet2ButtonInteract.interactable = false;
+                planet2CheckMarkBox.GetComponent<Image>().sprite = checkMarkOn;
             }
         }
     }
