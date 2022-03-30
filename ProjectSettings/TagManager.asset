@@ -10,6 +10,11 @@ TagManager:
   - Answer2
   - Answer3
   - Problem1
+  - Scion
+  - Single Laser
+  - Double Laser
+  - Asteroid
+  - DoubleLaserPowerUp
   layers:
   - Default
   - TransparentFX

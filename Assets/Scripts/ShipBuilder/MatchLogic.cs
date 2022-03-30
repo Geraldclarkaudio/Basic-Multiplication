@@ -18,6 +18,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject levelCompleted;
         private int points = 0;
 
+        public int pointz = 0;
+
         [SerializeField]
         private GameObject shipPart1;
         [SerializeField]
@@ -50,10 +52,25 @@ namespace PaperKiteStudios.MultiplicationMastermind
         [SerializeField]
         private GameObject questionPanel4;
 
+        [SerializeField]
+        private GameObject completeShipButton;
+        [SerializeField]
+        private GameObject Emiliaprefab;
+    
         // Start is called before the first frame update
         void Start()
         {
             Instance = this;
+        }
+
+        public void Update()
+        {
+            if (Instance.pointz == 12)
+            {
+                completeShipButton.SetActive(true);
+                Emiliaprefab.SetActive(true);
+                
+            }
         }
 
         void UpdatePointsText()
@@ -110,7 +127,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                     //turn on the nav buttons
                     navButtons.SetActive(true);
-
                 }
             }
             //ENGINESSSS::::::::::::
@@ -128,14 +144,16 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                     //turn on the nav buttons
                     navButtons.SetActive(true);
-
                 }
             }
+
+         
         }
 
         public static void AddPoint()
         {
             AddPoints(1);
+            Instance.pointz++;
         }
 
         public static  void AddPoints(int points)

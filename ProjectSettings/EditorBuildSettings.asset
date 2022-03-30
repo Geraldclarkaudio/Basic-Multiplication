@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceShipBuilderWithIntro.unity
     guid: 24ff7dcda0b27844db0fefe081715946
+  - enabled: 1
+    path: Assets/Scenes/ScionScene.unity
+    guid: a7fce8e167cf7b245ac0c958c6c48542
   m_configObjects: {}

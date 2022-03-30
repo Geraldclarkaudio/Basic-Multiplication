@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using SimpleJSON;
 using LoLSDK;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
@@ -23,10 +24,15 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject alien;
         private CameraBlend cameraBlend;
 
+        public string sceneToLoad;
+        public GameObject fadeout;
+
         private void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
             cameraBlend = GameObject.Find("CM StateDrivenCamera1").GetComponent<CameraBlend>();
+
+       
             StartDialogue();
 
         }
@@ -34,6 +40,11 @@ namespace PaperKiteStudios.MultiplicationMastermind
         private void Update()
         {
             Debug.Log("Index: " + index);
+
+            if(index == 2 && GameManager.Instance.shipComplete == true)
+            {
+                index = 3;
+            }
 
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
@@ -46,6 +57,16 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     canProceed = Time.time + 500;
                     dialogCanvas.SetActive(false);
                 }
+
+                if(index == 4)
+                {
+                    //fade out and move on to next scene. 
+                    StartCoroutine(LoadNextScene());
+                    fadeout.SetActive(true);
+
+                    GameManager.Instance.planet2Helped = true;
+                }
+                
                 //if (index >= 4)//DIALOG SECTION CUSTOMIZATION
                 //{
                 //    //Show Answer Question UI
@@ -94,6 +115,13 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 textComponent.text = init.GetText(lines[index]);
                 LOLSDK.Instance.SpeakText(lines[index]);
             }
+        }
+
+        IEnumerator LoadNextScene()
+        {
+            yield return new WaitForSeconds(2.5f);
+            SceneManager.LoadScene(sceneToLoad);
+            
         }
 
     }

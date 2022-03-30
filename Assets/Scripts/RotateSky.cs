@@ -6,7 +6,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 {
     public class RotateSky : MonoBehaviour
     {
-        private float rotateSpeed = 0.5f;
+        public float rotateSpeed = 0.5f;
 
         // Update is called once per frame
         void Update()

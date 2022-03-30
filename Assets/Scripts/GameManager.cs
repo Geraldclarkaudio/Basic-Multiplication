@@ -29,7 +29,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public bool enginesBuilt { get; set; }
         public bool wingsBuilt { get; set; }
 
-
+        public bool shipComplete { get; set; }
 
 
 
