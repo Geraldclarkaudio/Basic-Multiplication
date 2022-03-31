@@ -8,11 +8,8 @@ namespace PaperKiteStudios.MultiplicationMastermind {
     public class Dialog : MonoBehaviour
     {
         private Initializer init;
-
-    
         public string[] lines;
         private int index;
-
         private int i;
 
         public TextMeshProUGUI textComponent;
@@ -29,13 +26,16 @@ namespace PaperKiteStudios.MultiplicationMastermind {
 
         public GameObject dialogBox;
 
+        public GameObject introMusic;
+        public GameObject scionMusic;
+
+
         // Start is called before the first frame update
         void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
-            
-
             StartDialogue();
+            
         }
 
         // Update is called once per frame
@@ -46,7 +46,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             if(index >= 0 && index <= 5 || index == 8)
             {
                 captainCarla.SetActive(true);
-                scion.SetActive(false);
+                
 
                 if (index == 8)
                 {
@@ -64,10 +64,17 @@ namespace PaperKiteStudios.MultiplicationMastermind {
                 }
             }
 
+            if(index >= 0 && index <= 5)
+            {
+                introMusic.SetActive(true);
+            }
+
             if(index == 6 || index == 7)
             {
                 scion.SetActive(true);
                 captainCarla.SetActive(false);
+                introMusic.SetActive(false);
+                scionMusic.SetActive(true);
             }
 
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
@@ -93,6 +100,9 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             {
                 mouseClickAnim.SetActive(false);
             }
+
+            
+            
         }
 
         void StartDialogue()
