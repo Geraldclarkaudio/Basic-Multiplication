@@ -6,7 +6,7 @@ using LoLSDK;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class ScionSceneDialog : MonoBehaviour
+    public class QuestionDialog : MonoBehaviour
     {
         private Initializer init;
 
@@ -14,7 +14,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public string[] lines;
         private int index;
 
-        public TextMeshProUGUI textComponent;
+        public TMP_Text textComponent;
 
         private float canProceed = -1;
         private float textRate = 3.5f; //forces text to wait 3.5 seconds
@@ -23,8 +23,10 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject captainCarlaIcon;
         public GameObject scionIcon;
 
-        public GameObject dialogBox;
-        public GameObject scene1;//Intro Scene
+        public GameObject QuestionPanel;
+        public GameObject DialogPanel;
+        
+        private int i;
 
         // Start is called before the first frame update
         void Start()
@@ -36,30 +38,38 @@ namespace PaperKiteStudios.MultiplicationMastermind
         // Update is called once per frame
         void Update()
         {
-            if(Input.GetMouseButtonDown(0) && dialogBox.activeInHierarchy == false)
+         switch(i)
             {
-                return;
+                case 0:
+                    scionIcon.SetActive(true);
+                    break;
+                case 1:
+                    captainCarlaIcon.SetActive(true);
+                    scionIcon.SetActive(false);
+                    break;
+                case 2:
+                    scionIcon.SetActive(true);
+                    captainCarlaIcon.SetActive(false);
+                    break;
+                case 3:
+                    captainCarlaIcon.SetActive(true);
+                    scionIcon.SetActive(false);
+                    break;
+                case 4:
+                    captainCarlaIcon.SetActive(true);
+                    break;
             }
 
-            if(index == 0) 
-            {
-                scionIcon.SetActive(true);
-            }
-
-            if(index == 1)
-            {
-                captainCarlaIcon.SetActive(true);
-                scionIcon.SetActive(false);
-            }
-
+         
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
-                if(index == 1)
+                if (index == 4)
                 {
-                    //index++;
-                    dialogBox.SetActive(false);
-                    scene1.SetActive(true);
+                    //QuestionPanel Active
+                    QuestionPanel.SetActive(true);
+                    DialogPanel.SetActive(false);
                 }
+
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
@@ -86,6 +96,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         void StartDialogue()
         {
             index = 0;
+            i = 0;
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
@@ -95,6 +106,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             if (index < lines.Length - 1)
             {
                 index++;
+                i++;
                 textComponent.text = init.GetText(lines[index]);
                 LOLSDK.Instance.SpeakText(lines[index]);
             }

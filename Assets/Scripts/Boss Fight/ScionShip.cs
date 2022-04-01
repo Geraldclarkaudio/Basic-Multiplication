@@ -13,6 +13,8 @@ public class ScionShip : MonoBehaviour
     public GameObject scene1;//first timeline scene 
     public GameObject dialog;
 
+    public GameObject question1Dialog;
+
     private void Start()
     {
         rend = GetComponent<MeshRenderer>();
@@ -34,9 +36,9 @@ public class ScionShip : MonoBehaviour
             slider.value -= 1;
             StartCoroutine(HIT());
 
-            if(slider.value == 76)
+            if(slider.value == 76) //Question  1
             {
-                EventTrigger();
+                EnableQuestion1();
             }
         }
 
@@ -54,11 +56,10 @@ public class ScionShip : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
     }
 
-    public void EventTrigger()
+    public void EnableQuestion1()
     {
-        
-      Debug.Log("DAMNNNNAGE");
-        //Start another Dialog then start the asteroid Storm. 
+        //Start another Dialog then start the asteroid Storm.
+        question1Dialog.SetActive(true);
         
     }
 }

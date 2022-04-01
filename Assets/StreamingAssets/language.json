@@ -73,7 +73,16 @@
 		"shipBuildButton1": "Cockpit",
 		"shipBuildButton2": "Body",
 		"shipBuildButton3": "Wings",
-		"shipBuildButton4": "Engines"
+		"shipBuildButton4": "Engines",
+		"scionFight1":"Well well well. It seems you are able to keep up with me even though your ship is so small!",
+		"scionFight2":"Double M, you're doing great.",
+		"scionFight3":"Dont listen to her! You're doing terribly! One of my engines is gone!",
+		"scionFight4": "We only want to help you! Multiplication is critical to your survival!",
+		"scionFight5": "Lets fix the Scions engine. They have 4 engines total. 2 on either side of the ship. Which multiplicative equation represents 2 groups of 2 engines?",
+		"question1Text": "Which multiplicative equation represents 2 groups of 2 engines?",
+		"question1TextWrong": "Not exactly. Which one means 2 groups of 2 makes 4?",
+		"question1TextRight": "YES! Nice job"
+
 
 
 
