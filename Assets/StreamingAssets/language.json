@@ -69,7 +69,11 @@
 		"shipBuilder5": "Lets go get that Scion and teach him how to multiply.",
 		"scionBattle0": "HAHAHA you will NEVER catch me! Multiplication is too scary! I'll never learn it!",
 		"scionBattle1": "Double M, we need to slow that Scion down or else they will get away!",
-		"scionBattle2": "You really think you stand a chance in that tiny ship?! HAHAHAHAHA..."
+		"scionBattle2": "You really think you stand a chance in that tiny ship?! HAHAHAHAHA...",
+		"shipBuildButton1": "Cockpit",
+		"shipBuildButton2": "Body",
+		"shipBuildButton3": "Wings",
+		"shipBuildButton4": "Engines"
 
 
 

@@ -2840,9 +2840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cockpit
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b0736497a88ab34e9634f1a6b2da15f, type: 2}
   m_sharedMaterial: {fileID: -7783675089334649878, guid: 7b0736497a88ab34e9634f1a6b2da15f,
@@ -3946,7 +3944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Engines
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b0736497a88ab34e9634f1a6b2da15f, type: 2}
   m_sharedMaterial: {fileID: -7783675089334649878, guid: 7b0736497a88ab34e9634f1a6b2da15f,
@@ -7122,6 +7120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 830919270}
   - component: {fileID: 830919271}
+  - component: {fileID: 830919272}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -7168,6 +7167,29 @@ MonoBehaviour:
   wingsButton: {fileID: 691192995}
   bodyButton: {fileID: 481186265}
   enginesButton: {fileID: 1981582839}
+--- !u!114 &830919272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830919269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bb502eabf208948a06e47fd2eeb33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - {fileID: 285627033}
+  - {fileID: 1190713811}
+  - {fileID: 2102222107}
+  - {fileID: 441927876}
+  lines:
+  - shipBuildButton1
+  - shipBuildButton2
+  - shipBuildButton3
+  - shipBuildButton4
+  i: 0
 --- !u!1 &848742605
 GameObject:
   m_ObjectHideFlags: 3
@@ -9802,9 +9824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Body
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b0736497a88ab34e9634f1a6b2da15f, type: 2}
   m_sharedMaterial: {fileID: -7783675089334649878, guid: 7b0736497a88ab34e9634f1a6b2da15f,
@@ -13828,6 +13848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7409214206b5bd4299be2300bcc1ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateSpeed: 0.5
 --- !u!1 &1719867555
 GameObject:
   m_ObjectHideFlags: 0
@@ -14663,7 +14684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1819685780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17529,7 +17550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wings
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b0736497a88ab34e9634f1a6b2da15f, type: 2}
   m_sharedMaterial: {fileID: -7783675089334649878, guid: 7b0736497a88ab34e9634f1a6b2da15f,

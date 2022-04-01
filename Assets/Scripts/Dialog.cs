@@ -29,13 +29,17 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         public GameObject introMusic;
         public GameObject scionMusic;
 
+        private Animator introMusicAnim;
+        private Animator scionMusicAnim;
+
 
         // Start is called before the first frame update
         void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
-            StartDialogue();
-            
+            introMusicAnim = GameObject.Find("IntroBGM").GetComponent<Animator>();
+            scionMusicAnim = GameObject.Find("ScionBGM").GetComponent<Animator>();
+            StartDialogue();          
         }
 
         // Update is called once per frame
@@ -43,47 +47,63 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         {
             Debug.Log("index is " + index);
 
-            if(index >= 0 && index <= 5 || index == 8)
+            switch(i)
             {
-                captainCarla.SetActive(true);
-                
+                case 0:
+                    captainCarla.SetActive(true);
+                    introMusic.SetActive(true);
+                    break;
 
-                if (index == 8)
-                {
+                case 1:
+                    captainCarla.SetActive(true);
+                    break;
+
+                case 2:
+                    captainCarla.SetActive(true);
+                    break;
+
+                case 3:
+                    captainCarla.SetActive(true);
+                    break;
+
+                case 4:
+                    captainCarla.SetActive(true);
+                    break;
+
+                case 5:
+                    captainCarla.SetActive(true);
+                    break;
+
+                case 6:
+                    scion.SetActive(true);
+                    captainCarla.SetActive(false);
+                    introMusicAnim.SetTrigger("FadeOut");
+                    scionMusicAnim.SetTrigger("FadeIn");
+                    scionMusic.SetActive(true);
+
+                    break;
+
+                case 7:
+                    scion.SetActive(true);
+                    break;
+
+                case 8:
+                    captainCarla.SetActive(true);
+                    captainCarla.transform.position = new Vector3(-655.37f, -550, -942);
                     carlaAnim = GameObject.Find("Captain Carla").GetComponent<Animator>();
                     carlaAnim.SetTrigger("LetsGo");
-
-                    captainCarla.transform.position = new Vector3(-655.37f, -550, -942);
-
-                    if(Input.GetMouseButtonDown(0) && Time.time > canProceed)
-                    {
-                        canProceed = Time.time + 1;
-                        homeBaseButton.SetActive(true);
-                        dialogBox.SetActive(false);
-                    }
-                }
-            }
-
-            if(index >= 0 && index <= 5)
-            {
-                introMusic.SetActive(true);
-            }
-
-            if(index == 6 || index == 7)
-            {
-                scion.SetActive(true);
-                captainCarla.SetActive(false);
-                introMusic.SetActive(false);
-                scionMusic.SetActive(true);
+                    scion.SetActive(false);
+                    canProceed = Time.time + 1;
+                    homeBaseButton.SetActive(true);
+                    dialogBox.SetActive(false);
+                    break;
             }
 
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
-
                 if (textComponent.text == init.GetText(lines[index]))
-                {
-                    NextLine();
-                    
+                {        
+                    NextLine(); 
                     canProceed = Time.time + textRate;
                 }
                 else
@@ -99,15 +119,13 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             else if (Time.time < canProceed)
             {
                 mouseClickAnim.SetActive(false);
-            }
-
-            
-            
+            }      
         }
 
         void StartDialogue()
         {
             index = 0;
+            i = 0;
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
@@ -117,6 +135,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             if (index < lines.Length - 1)
             {
                 index++;
+                i++;
                 textComponent.text = init.GetText(lines[index]);
                 LOLSDK.Instance.SpeakText(lines[index]);
             }
