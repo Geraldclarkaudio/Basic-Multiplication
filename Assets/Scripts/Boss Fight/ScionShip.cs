@@ -14,6 +14,8 @@ public class ScionShip : MonoBehaviour
     public GameObject dialog;
 
     public GameObject question1Dialog;
+    public GameObject question2Dialog;
+    public GameObject engineBlowout;
 
     private void Start()
     {
@@ -38,8 +40,26 @@ public class ScionShip : MonoBehaviour
 
             if(slider.value == 76) //Question  1
             {
+                engineBlowout.SetActive(true);
                 EnableQuestion1();
             }
+        }
+
+        if(slider.value == 51)
+        {
+            //Question 2 Enabled
+            question2Dialog.SetActive(true);
+        }
+
+        if(slider.value == 26)
+        {
+            //question3 enabled. 
+            //Asteroid storm 
+        }
+
+        if(slider.value == 1)
+        {
+            //closing dialog for this scene. 
         }
 
     }
@@ -58,8 +78,12 @@ public class ScionShip : MonoBehaviour
 
     public void EnableQuestion1()
     {
-        //Start another Dialog then start the asteroid Storm.
-        question1Dialog.SetActive(true);
-        
+        question1Dialog.SetActive(true);        
     }
+
+    public void FixEngine()
+    {
+        engineBlowout.SetActive(false);
+    }
+
 }

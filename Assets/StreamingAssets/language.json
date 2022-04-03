@@ -81,7 +81,15 @@
 		"scionFight5": "Lets fix the Scions engine. They have 4 engines total. 2 on either side of the ship. Which multiplicative equation represents 2 groups of 2 engines?",
 		"question1Text": "Which multiplicative equation represents 2 groups of 2 engines?",
 		"question1TextWrong": "Not exactly. Which one means 2 groups of 2 makes 4?",
-		"question1TextRight": "YES! Nice job"
+		"question1TextRight": "YES! Nice job",
+		"scionFight6": "Ohhh I get it. 2 groups of 2 makes 4! Still.. Just because I learned that doesnt mean I want to learn more! Go away!",
+		"scionFight7": "Keep up the pressure! We're getting the message across. The Scion almost knows how to multiply!",
+		"scionFight8": "I dont think our lasers are getting the message across. We need to double their power!",
+		"scionFight9": "We are firing 1 laser at a time right now. If we double the laser that means we will have 2 lasers firing at once!",
+		"scionFight10": "Determine which mutliplicative sentence best fits this situation? 1 laser becoming 2.",
+		"question2Text": "Which multiplicative sentence means 1 group of 2 lasers?",
+		"question2TextWrong": "Not quite. GIve it another try. Which multiplicative sentence means that we doubled the laser?",
+		"question2TextRight": "Precisely!"
 
 
 

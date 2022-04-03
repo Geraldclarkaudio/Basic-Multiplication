@@ -6,7 +6,7 @@ using LoLSDK;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class QuestionDialog : MonoBehaviour
+    public class Question2Dialog : MonoBehaviour
     {
         private Initializer init;
 
@@ -25,7 +25,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         public GameObject QuestionPanel;
         public GameObject DialogPanel;
-        
+
         private int i;
 
         public bool correctAnswer = false;
@@ -44,57 +44,24 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
             if(correctAnswer == true)
             {
-                index = 5;
-                i = 5;
-                correctAnswer = false;
+                //increment index by 1 to make next line happen. 
             }
 
-         switch(i)
+            switch (i)
             {
                 case 0:
-                    scionIcon.SetActive(true);
-                    break;
-                case 1:
                     captainCarlaIcon.SetActive(true);
-                    scionIcon.SetActive(false);
-                    break;
-                case 2:
-                    scionIcon.SetActive(true);
-                    captainCarlaIcon.SetActive(false);
-                    break;
-                case 3:
-                    captainCarlaIcon.SetActive(true);
-                    scionIcon.SetActive(false);
-                    break;
-                case 4:
-                    captainCarlaIcon.SetActive(true);
-                    break;
-                case 5:
-                    captainCarlaIcon.SetActive(false);
-                    scionIcon.SetActive(true);
-                    break;
-                case 6:
-                    captainCarlaIcon.SetActive(true);
-                    scionIcon.SetActive(false);
                     break;
             }
 
-         
+
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
-            {
-                if (index == 4)
+            { 
+                if(index == 2)
                 {
-                    index = 5;
-                    i = 5;
+                    //turn on question panel
                     QuestionPanel.SetActive(true);
-                    DialogPanel.SetActive(false);
                 }
-
-                if(index == 6)
-                {
-                    DialogPanel.SetActive(false);
-                }
-
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
