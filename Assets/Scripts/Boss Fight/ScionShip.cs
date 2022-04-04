@@ -15,6 +15,7 @@ public class ScionShip : MonoBehaviour
 
     public GameObject question1Dialog;
     public GameObject question2Dialog;
+    public GameObject question3Dialog;
     public GameObject engineBlowout;
 
     private void Start()
@@ -54,7 +55,7 @@ public class ScionShip : MonoBehaviour
         if(slider.value == 26)
         {
             //question3 enabled. 
-            
+            question3Dialog.SetActive(true);
         }
 
         if(slider.value == 1)

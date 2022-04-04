@@ -15,7 +15,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         [SerializeField]
         private GameObject doubleLaser;
 
-        private bool hasDoubleLaser = false;
+        public bool hasDoubleLaser = false;
 
         // Start is called before the first frame update
         void Start()
@@ -91,23 +91,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 }
             }
           
-        }
-
-        // COLLIDE WITH DOUBLE LASER POWER UP
-        private void OnTriggerEnter(Collider other)
-        {
-            if(other.CompareTag("DoubleLaserPowerUp"))
-            {
-                hasDoubleLaser = true;
-                StartCoroutine(DoubleLaserPowerUp());
-            }
-        }
-        //DOUBLE LASER COOL DOWN
-        IEnumerator DoubleLaserPowerUp()
-        {
-            yield return new WaitForSeconds(10f);
-
-            hasDoubleLaser = false;
         }
     }
 }

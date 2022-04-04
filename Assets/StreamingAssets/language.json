@@ -91,7 +91,19 @@
 		"question2TextWrong": "Not quite. GIve it another try. Which multiplicative sentence means that we doubled the laser?",
 		"question2TextRight": "Precisely!",
 		"scionFight11": "HA! You may have powered up your laser, but lets see if you can hit me with them after I fly into this asteroid storm!",
-		"scionFight12": "Oh no! Look out!"
+		"scionFight12": "Oh no! Look out!",
+		"scionFight13": "You are pretty good with that laser. It looks like I have to resort to plan B.",
+		"scionFight14": "I am going to unleash my fleet of Mini Scion Bots! MINIONS... ATTACK!",
+		"scionFight15": "We were expecting this. It looks like this ship only has 14 Mini Scion Bots.",
+		"scionFight16": "Lets knock them down in groups of 2. That means we should only have 7 groups.",
+		"scionFight17": "Which multiplicative sentence best describes 7 groups of 2?",
+		"question3Text": "Which multiplicative sentence best describes 7 groups of 2 Mini Scion Bots?",
+		"question3TextWrong": "Not quite. Give it aother try. The Scion's ship has 7 groups of 2 Mini Scion Bots.",
+		"question3TextRight": "Correct! Now lets knock down these Mini Scion Bots and catch up with that Scion! We've almost taught it to multiply!",
+		"scionFight18": "WATCH OUT!",
+		"finalScionDialog": "NO! You destroyed all of my mini bots!",
+		"finalScionDialog2": "Thats right! Just stop running from us! We want to teach you how to multiply. It will make your life so much easier!",
+		"finalScionDialog3": "FINE! I'm going to land it at your Home Base. I'll meet you there."
 
 
 
