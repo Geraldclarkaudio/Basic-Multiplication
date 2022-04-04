@@ -30,6 +30,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         public bool correctAnswer = false;
 
+        public GameObject asteroidStorm;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -45,11 +47,27 @@ namespace PaperKiteStudios.MultiplicationMastermind
             if(correctAnswer == true)
             {
                 //increment index by 1 to make next line happen. 
+                index = 3;
+                i = 3;
+                correctAnswer = false;
             }
 
             switch (i)
             {
                 case 0:
+                    scionIcon.SetActive(false);
+                    captainCarlaIcon.SetActive(true);
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    scionIcon.SetActive(true);
+                    captainCarlaIcon.SetActive(false);
+                    break;
+                case 4:
+                    scionIcon.SetActive(false);
                     captainCarlaIcon.SetActive(true);
                     break;
             }
@@ -61,6 +79,12 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 {
                     //turn on question panel
                     QuestionPanel.SetActive(true);
+                }
+
+                if(index == 4)
+                {
+                    asteroidStorm.SetActive(true);
+                    DialogPanel.SetActive(false);
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))

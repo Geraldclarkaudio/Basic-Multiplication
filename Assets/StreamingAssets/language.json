@@ -89,7 +89,9 @@
 		"scionFight10": "Determine which mutliplicative sentence best fits this situation? 1 laser becoming 2.",
 		"question2Text": "Which multiplicative sentence means 1 group of 2 lasers?",
 		"question2TextWrong": "Not quite. GIve it another try. Which multiplicative sentence means that we doubled the laser?",
-		"question2TextRight": "Precisely!"
+		"question2TextRight": "Precisely!",
+		"scionFight11": "HA! You may have powered up your laser, but lets see if you can hit me with them after I fly into this asteroid storm!",
+		"scionFight12": "Oh no! Look out!"
 
 
 

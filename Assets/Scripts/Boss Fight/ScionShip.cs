@@ -54,7 +54,7 @@ public class ScionShip : MonoBehaviour
         if(slider.value == 26)
         {
             //question3 enabled. 
-            //Asteroid storm 
+            
         }
 
         if(slider.value == 1)
