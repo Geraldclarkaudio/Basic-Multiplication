@@ -38,7 +38,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
                 cargoCheckMarkBox.GetComponent<Image>().sprite = checkMarkOn;
                 //set these buttons true now. Happens once Cargo ship is helped. Stay active throughout the game. 
                 planet1Button.SetActive(true);
-                planet2Button.SetActive(true);
+                //planet2Button.SetActive(true);
             }
 
             if(GameManager.Instance.planet1Helped == true)
@@ -47,6 +47,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
                 planet1ButtonInteract.interactable = false;
                 //put check mark 
                 planet1CheckMarkBox.GetComponent<Image>().sprite = checkMarkOn;
+                planet2Button.SetActive(true);
             }
 
             if(GameManager.Instance.planet2Helped == true)

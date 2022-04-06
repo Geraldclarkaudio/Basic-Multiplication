@@ -24,7 +24,9 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject avatar;
         public GameObject dialogBox;
 
-        public GameObject planetSelectionUI; 
+        public GameObject planetSelectionUI;
+
+        public GameObject scionButton;
 
         private void Start()
         {
@@ -41,18 +43,13 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 //display welcome back text
                 index = 3;
             }
-            if(GameManager.Instance.planet1Helped == true && GameManager.Instance.planet2Helped == false)//HELPED PLANET 1 and NOT PLANET 2 Yet
+            if(GameManager.Instance.planet1Helped == true)
             {
                 index = 6;
             }
-            if (GameManager.Instance.planet2Helped == true && GameManager.Instance.planet1Helped == false)//HELPED PLANET 2 BUT NOT 1
+            if (GameManager.Instance.planet2Helped == true)
             {
                 index = 9;
-            }
-
-            if (GameManager.Instance.planet2Helped == true && GameManager.Instance.planet1Helped == true)//HELPED Both
-            {
-                //index is wherever the LETS GO FIGHT THE SCION dialog starts. 
             }
 
         }
@@ -76,6 +73,12 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 if(index == 8) // end of post planet 1 dialog
                 {
                     planetSelectionUI.SetActive(true);
+                    dialogPanel.SetActive(false);
+                }
+
+                if(index == 9)
+                {
+                    scionButton.SetActive(true); // sets end game button to true. 
                     dialogPanel.SetActive(false);
                 }
 

@@ -12,11 +12,12 @@
 		"scionOpening02": "I want to let you know that you will never catch me! I will never learn to multiply! Its too scary!",
 		"openingScene07": "Alright double M. Lets get this show on the road! I'll see you at Home Base.",
 		"HomeBaseIntro1": "Welcome to Home Base Recruit.",
-		"HomeBaseIntro2": "From here you can select which planet to assist. First lets go help our friends in the cargo ship.",
+		"HomeBaseIntro2": "From here you can navigate to each of the surrounding planets. First lets go help our friends in the cargo ship.",
 		"HomeBaseIntro3": "I believe the Scion already got their fuel, so bring some fuel tanks. Lets go!",
 		"planetSelectUIText1": "CARGO SHIP",
 		"planetSelectUIText2": "PLANET 2",
 		"planetSelectUIText3": "PLANET 3",
+		"teachScionText":"Teach Scion To Multiply",
 		"cargoShip1": "Thank goodness you're here!",
 		"cargoShip2": "That Scion came and stole our fuel. He said something about having all the fuel means he'll never have to learn multiplication..?",
 		"cargoShip3": "That was weird.",
@@ -35,7 +36,7 @@
 		"repeatAdditionInstructions": "Drag the correct equation to the empty slot below. Which equation is the repeated addition equation for 4 X 2 = 8?",
 		"welcomeBackToBase1": "Welcome back recruit. You did awesome out there.",
 		"welcomeBackToBase2": "We got pencils from the cargo ship. Maybe we can catch the Scion and teach it multiplication!",
-		"welcomeBackToBase3": "Lets get some more supplies from the other 2 planets. Lets go!",
+		"welcomeBackToBase3": "Lets get some more supplies from the other 2 planets. First we need to help our reptilian friends on Cavity Planet! Lets go!",
 		"planet1intro1": "Welcome to Cavity Planet.",
 		"planet1intro2": "Depite our name, we take pride in our gorgeous teeth!",
 		"planet1intro3": "The Scion who has been giving you trouble visited us, but took all of our toothbrushes!",
@@ -55,7 +56,7 @@
 		"paperObtained": "5,000 pieces of paper obtained!",
 		"welcomeBackToBase4": "Awesome work! Now we have pencils and paper.",
 		"welcomeBackToBase5": "Now all we need to do is catch that Scion and teach him how to multiply!",
-		"welcomeBackToBase6": "Lets check out Planet 2 and see what they need! Surely Emilia has some ideas on how we can catch him.",
+		"welcomeBackToBase6": "Lets check out Emilia's planet and see what they need! Surely Emilia has some ideas on how we can catch him.",
 		"emiliaIntro1": "Hiya! The name is Emilia. Yes. Like Emilia Earhart, but the space version.",
 		"emiliaIntro2": "Yea Yea yea, the Scion came here too. They didn't steal anything though.",
 		"emiliaIntro3": "They just trashed my planet and left! I hear you're looking to catch him.",
@@ -103,7 +104,12 @@
 		"scionFight18": "WATCH OUT!",
 		"finalScionDialog": "NO! You destroyed all of my mini bots!",
 		"finalScionDialog2": "Thats right! Just stop running from us! We want to teach you how to multiply. It will make your life so much easier!",
-		"finalScionDialog3": "FINE! I'm going to land it at your Home Base. I'll meet you there."
+		"finalScionDialog3": "FINE! I'm going to land it at your Home Base. I'll meet you there.",
+		"welcomeBackToBase7":"We finally got the Scion to agree to learn to multiply. Lets get to work using the paper and pencils we got for helping our neighbors.",
+		"shipBuildQuestionCockpit":"Match the following repeated addition equations to their multiplicative equation counterparts.",
+		"shipBuildQuestionBody":"Match the following multiplicative sentences to their description.",
+		"shipBuildQuestionWings":"Match the following multiplicative sentences to their repeated addition counterparts.",
+		"shipBuildQuestionEngine":"Match the following multiplicative sentences to their repeated addition counterparts."
 
 
 

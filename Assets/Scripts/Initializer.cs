@@ -233,38 +233,11 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
             public void SceneChanged()
             {
-                //I need to say if Active Scene is "gas" playerdata.level = 1 and so on and so forth.
-                Scene scene = SceneManager.GetActiveScene();
-                //Debug.Log("Active Scene is " + scene.name);
+                Scene scene = SceneManager.GetActiveScene(); 
 
                 if (scene.name == "OpeningScene")
                 {
                     playerData.level = 1;
-                }
-
-                if (scene.name == "HomeBase")
-                {
-                if(GameManager.Instance.cargoShipHelped == false)
-                {
-                    playerData.level = 2;
-                }
-                    if(GameManager.Instance.cargoShipHelped == true)
-                    {
-                        playerData.level = 4;
-                    }
-                if (GameManager.Instance.planet1Helped == true && GameManager.Instance.planet2Helped == false)
-                {
-                    playerData.level = 7;
-                }
-                    if (GameManager.Instance.planet1Helped == false && GameManager.Instance.planet2Helped == true)
-                    {
-                        playerData.level = 7;
-                    }
-                    if (GameManager.Instance.planet1Helped == true && GameManager.Instance.planet2Helped == true)
-                    {
-                        playerData.level = 8;
-                    }
-
                 }
 
                 if (scene.name == "CargoShipScene")
@@ -279,10 +252,41 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                 if (scene.name == "Planet3")
                 {
-                    playerData.level = 5;
+                    playerData.level = 7;
+                }
+                
+                if(scene.name == "SpaceShipBuilderWithIntro")
+                {
+                playerData.level = 8;
+                }
+                if (scene.name == "ScionScene")
+                {
+                    playerData.level = 9;
                 }
 
-                Save();
+                if (scene.name == "HomeBase")
+                {
+
+                        if (GameManager.Instance.cargoShipHelped == false)
+                        {
+                            playerData.level = 2;
+                        }
+
+                        if (GameManager.Instance.cargoShipHelped == true)
+                        {
+                            playerData.level = 4;
+                        }
+
+                        if (GameManager.Instance.planet1Helped == true)
+                        {
+                            playerData.level = 6;
+                        }
+
+                        if (GameManager.Instance.planet2Helped == true)
+                        {
+                            playerData.level = 10;
+                        }
+                }
             }
     }
 }

@@ -93,14 +93,17 @@ namespace PaperKiteStudios.MultiplicationMastermind {
                     carlaAnim = GameObject.Find("Captain Carla").GetComponent<Animator>();
                     carlaAnim.SetTrigger("LetsGo");
                     scion.SetActive(false);
-                    canProceed = Time.time + 1;
-                    homeBaseButton.SetActive(true);
-                    dialogBox.SetActive(false);
+                   // canProceed = Time.time + 1;
                     break;
             }
 
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
+                if(index == 8)
+                {
+                    dialogBox.SetActive(false);
+                    homeBaseButton.SetActive(true);
+                }
                 if (textComponent.text == init.GetText(lines[index]))
                 {        
                     NextLine(); 
