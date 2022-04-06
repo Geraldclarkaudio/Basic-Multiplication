@@ -81,6 +81,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 {
                     //set dialog ins=acrive
                     QuestionPanel.SetActive(true);
+                    DialogPanel.SetActive(false);
                 }
                 if(index == 5)
                 {

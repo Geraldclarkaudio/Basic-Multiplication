@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10076865, g: 0.122019224, b: 0.20250365, a: 1}
+  m_IndirectSpecularColor: {r: 0.049917743, g: 0.07084628, b: 0.12563914, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -486,14 +486,14 @@ MonoBehaviour:
   m_text: Cargo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf0bd590353a5e041a1f90149badccfb, type: 2}
-  m_sharedMaterial: {fileID: -6162650353923900074, guid: db00d6a22e130574fa4055cdf50c4501,
+  m_sharedMaterial: {fileID: 9010539713929191390, guid: cf0bd590353a5e041a1f90149badccfb,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294901848
+    rgba: 4294501120
   m_fontColor: {r: 0, g: 0.89077544, b: 0.9716981, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -577,7 +577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &359556968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,7 +624,6 @@ GameObject:
   - component: {fileID: 444256473}
   - component: {fileID: 444256472}
   - component: {fileID: 444256471}
-  - component: {fileID: 444256470}
   m_Layer: 5
   m_Name: TeachScionButton
   m_TagString: Untagged
@@ -652,19 +651,6 @@ RectTransform:
   m_AnchoredPosition: {x: -305, y: -38}
   m_SizeDelta: {x: 61.953705, y: 29.746948}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &444256470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444256468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f37fec2bc7057419ba5a1f0c8a8c03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: Planet3
 --- !u!114 &444256471
 MonoBehaviour:
   m_ObjectHideFlags: 0

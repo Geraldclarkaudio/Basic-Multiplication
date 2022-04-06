@@ -17,17 +17,36 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         public bool hasDoubleLaser = false;
 
+        public GameObject panel1;
+        public GameObject panel2;
+        public GameObject panel3;
+        public GameObject panel4;
+        public GameObject panel5;
+        public GameObject panel6;
+        public GameObject panel7;
+        public GameObject panel8;
+        public GameObject panel9;
+       
+
         // Start is called before the first frame update
         void Start()
         {
-            
+        
         }
 
         // Update is called once per frame
         void Update()
         {
             Movement();
-            Fire();
+
+            if(panel1.activeSelf == true || panel2.activeSelf == true || panel3.activeSelf == true || panel4.activeSelf == true || panel5.activeSelf == true || panel6.activeSelf == true || panel7.activeSelf == true || panel8.activeSelf == true || panel9.activeSelf == true)
+            {
+                return;
+            }
+            else
+            {
+                Fire();
+            }
         }
 
         public void Movement()

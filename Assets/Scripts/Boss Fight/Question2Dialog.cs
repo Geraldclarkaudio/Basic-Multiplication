@@ -79,6 +79,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 {
                     //turn on question panel
                     QuestionPanel.SetActive(true);
+                    DialogPanel.SetActive(false);
                 }
 
                 if(index == 4)

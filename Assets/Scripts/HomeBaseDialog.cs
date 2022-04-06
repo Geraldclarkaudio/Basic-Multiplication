@@ -56,6 +56,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
             private void Update()
         {
+            Debug.Log("index = " + index);
+
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
                 if(index == 2) // end of intro dialog
@@ -78,6 +80,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                 if(index == 9)
                 {
+                    planetSelectionUI.SetActive(true);
                     scionButton.SetActive(true); // sets end game button to true. 
                     dialogPanel.SetActive(false);
                 }

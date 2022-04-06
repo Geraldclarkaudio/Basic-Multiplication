@@ -31,7 +31,7 @@ public class ScionBotMovement : MonoBehaviour
 
         if (transform.position.x >= 20f)
         {
-            Destroy(this.gameObject);
+            transform.position = new Vector3(-21, Random.Range(-10.5f, 41), 0);
         }
     }
 }

@@ -24,6 +24,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject scionIcon;
 
         public GameObject DialogPanel;
+        public GameObject EndScene;
+        public GameObject fadeOut;
 
         private int i;
 
@@ -46,23 +48,24 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     captainCarlaIcon.SetActive(false);
                     break;
                 case 1:
-                    break;
-                case 2:
                     scionIcon.SetActive(false);
                     captainCarlaIcon.SetActive(true);
                     break;
-                case 3:
-                    break;
-                case 4:
+                case 2:
+                    scionIcon.SetActive(true);
+                    captainCarlaIcon.SetActive(false);
                     break;
             }
 
 
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {        
-                if(index == 3)
+                if(index == 2)
                 {
-                    DialogPanel.SetActive(false);
+                    
+                    //Fade out true
+                    fadeOut.SetActive(true);
+                    StartCoroutine(GoToBase());
                 }
                 if (textComponent.text == init.GetText(lines[index]))
                 {
@@ -103,6 +106,13 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 textComponent.text = init.GetText(lines[index]);
                 LOLSDK.Instance.SpeakText(lines[index]);
             }
+        }
+
+        IEnumerator GoToBase()
+        {
+            yield return new WaitForSeconds(3.0f);
+            DialogPanel.SetActive(false);
+            EndScene.SetActive(true);
         }
     }
 }
