@@ -52,6 +52,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                         wrongAnswerPanel.SetActive(true);
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = ogPos.originalPosition; 
                         canDrop = true;
+                        AudioManager.Instance.WrongAnswer();
 
                         return;
                     }
@@ -60,6 +61,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
                         Debug.Log("Dropped" + eventData.pointerDrag.name);
                         eventData.pointerDrag.GetComponent<DragDrop>().enabled = false;
+                        AudioManager.Instance.CorrectAnswer();
                         
                         if(SceneManager.GetActiveScene().name == "CargoShipScene")
                         {

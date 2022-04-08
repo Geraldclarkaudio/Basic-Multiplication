@@ -88,11 +88,14 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     i = 5;
                     QuestionPanel.SetActive(true);
                     DialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
                 }
 
                 if(index == 6)
                 {
                     DialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+
                 }
 
 
@@ -125,6 +128,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {

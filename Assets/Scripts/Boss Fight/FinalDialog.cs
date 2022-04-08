@@ -62,8 +62,10 @@ namespace PaperKiteStudios.MultiplicationMastermind
             {        
                 if(index == 2)
                 {
-                    
+
                     //Fade out true
+                    AudioManager.Instance.EndDialogSound();
+
                     fadeOut.SetActive(true);
                     StartCoroutine(GoToBase());
                 }
@@ -96,6 +98,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
+
         }
         void NextLine()
         {

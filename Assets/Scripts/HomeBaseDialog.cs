@@ -64,25 +64,36 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 {
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+                    mouseClickAnim.SetActive(false);
                 }
 
                 if(index == 5) //enf of cargoship dialog
                 {
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+                    mouseClickAnim.SetActive(false);
+
                 }
 
-                if(index == 8) // end of post planet 1 dialog
+                if (index == 8) // end of post planet 1 dialog
                 {
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+                    mouseClickAnim.SetActive(false);
+
                 }
 
-                if(index == 9)
+                if (index == 9)
                 {
                     planetSelectionUI.SetActive(true);
                     scionButton.SetActive(true); // sets end game button to true. 
+                    mouseClickAnim.SetActive(false);
                     dialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+                    
                 }
 
                 //NEDD PLANET 2 DIALOG
@@ -115,6 +126,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {

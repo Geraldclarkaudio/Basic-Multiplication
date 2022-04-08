@@ -47,6 +47,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     //Show Multiplicative Sentence
                     //mouseClickAnim.SetActive(false);
                     dialogBox.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
                     
 
                     multiplicativeSentence.SetActive(true);
@@ -80,6 +81,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {

@@ -43,6 +43,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     dialogBox.SetActive(false);
                     mouseClickAnim.SetActive(false);
                     alien.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
 
                     answerQuestionUI.SetActive(true);
                 }
@@ -75,6 +76,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {

@@ -80,12 +80,16 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     //turn on question panel
                     QuestionPanel.SetActive(true);
                     DialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+
                 }
 
-                if(index == 4)
+                if (index == 4)
                 {
                     asteroidStorm.SetActive(true);
                     DialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))
@@ -117,6 +121,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
+
         }
         void NextLine()
         {

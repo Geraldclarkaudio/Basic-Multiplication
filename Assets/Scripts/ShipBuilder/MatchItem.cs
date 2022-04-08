@@ -46,6 +46,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             }
             else
             {
+                AudioManager.Instance.WrongAnswer(); 
                 Destroy(line);
             }
         }

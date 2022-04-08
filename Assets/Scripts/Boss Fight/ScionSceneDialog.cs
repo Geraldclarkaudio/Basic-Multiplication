@@ -59,6 +59,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     //index++;
                     dialogBox.SetActive(false);
                     scene1.SetActive(true);
+                    AudioManager.Instance.EndDialogSound();
+
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))
@@ -89,6 +91,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
+
         }
         void NextLine()
         {

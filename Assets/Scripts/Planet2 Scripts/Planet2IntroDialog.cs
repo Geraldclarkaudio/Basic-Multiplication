@@ -43,6 +43,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     alien.SetActive(false);
                     canProceed = Time.time + 500;
                     goToHangarButton.SetActive(true);
+                    AudioManager.Instance.EndDialogSound();
                     dialogBox.SetActive(false);     
                     
                 }
@@ -75,6 +76,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {

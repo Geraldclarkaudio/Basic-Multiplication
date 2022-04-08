@@ -56,27 +56,20 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     alien.SetActive(false);
                     canProceed = Time.time + 500;
                     dialogCanvas.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+
                 }
 
-                if(index == 4)
+                if (index == 4)
                 {
                     //fade out and move on to next scene. 
                     StartCoroutine(LoadNextScene());
                     fadeout.SetActive(true);
 
                     GameManager.Instance.planet2Helped = true;
+                    AudioManager.Instance.EndDialogSound();
                 }
                 
-                //if (index >= 4)//DIALOG SECTION CUSTOMIZATION
-                //{
-                //    //Show Answer Question UI
-                //    mouseClickAnim.SetActive(false);
-                //    alien.SetActive(false);
-                //    canProceed = Time.time + 500;
-                //    goToHangarButton.SetActive(true);
-                //    dialogBox.SetActive(false);
-
-                //}
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
@@ -106,6 +99,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {

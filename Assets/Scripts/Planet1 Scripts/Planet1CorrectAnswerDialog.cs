@@ -16,7 +16,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public TextMeshProUGUI textComponent;
 
         private float canProceed = -1;
-        private float textRate = 0.5f;
+        private float textRate = 4.0f;
 
         public GameObject mouseClickAnim;
         public GameObject dialogBox;
@@ -42,6 +42,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     mouseClickAnim.SetActive(false);
                     alien.SetActive(false);
                     dialogBox.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
                 }
 
                 if (textComponent.text == init.GetText(lines[index]))
@@ -72,6 +73,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {

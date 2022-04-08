@@ -18,10 +18,13 @@ public class ScionShip : MonoBehaviour
     public GameObject question3Dialog;
     public GameObject engineBlowout;
 
+ 
+
     private void Start()
     {
         rend = GetComponent<MeshRenderer>();
         animEvents = GetComponent<ScionANimationEvents>();
+       
     }
 
     private void Update()
@@ -67,6 +70,7 @@ public class ScionShip : MonoBehaviour
 
     IEnumerator HIT()
     {
+        
         rend.enabled = false;
         yield return new WaitForSeconds(0.15f);
         rend.enabled = true;

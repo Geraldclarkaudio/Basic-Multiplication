@@ -154,6 +154,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             AddPoints(1);
             Instance.pointz++;
+            AudioManager.Instance.AddPointSound();
         }
 
         public static  void AddPoints(int points)

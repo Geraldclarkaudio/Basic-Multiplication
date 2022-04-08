@@ -82,13 +82,15 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     //set dialog ins=acrive
                     QuestionPanel.SetActive(true);
                     DialogPanel.SetActive(false);
+                    AudioManager.Instance.EndDialogSound();
+
                 }
-                if(index == 5)
+                if (index == 5)
                 {
                     scionSpawner.SetActive(true);
                     botCounter.SetActive(true);
                     spaceShip.hasDoubleLaser = false;
-                    
+                    AudioManager.Instance.EndDialogSound();
                     DialogPanel.SetActive(false);
                 }
 
@@ -121,6 +123,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
+
         }
         void NextLine()
         {

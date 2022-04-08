@@ -99,10 +99,14 @@ namespace PaperKiteStudios.MultiplicationMastermind {
 
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
-                if(index == 8)
+                
+
+                if (index == 8)
                 {
                     dialogBox.SetActive(false);
                     homeBaseButton.SetActive(true);
+                    AudioManager.Instance.EndDialogSound();
+
                 }
                 if (textComponent.text == init.GetText(lines[index]))
                 {        
@@ -132,6 +136,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
+            AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {
