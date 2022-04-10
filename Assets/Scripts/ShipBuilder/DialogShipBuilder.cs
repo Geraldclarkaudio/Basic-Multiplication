@@ -17,7 +17,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public TextMeshProUGUI textComponent;
 
         private float canProceed = -1;
-        private float textRate = 1f;
+        private float textRate = 3.5f;
 
         public GameObject mouseClickAnim;
         public GameObject dialogCanvas;

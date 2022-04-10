@@ -9,6 +9,8 @@ public class ScionANimationEvents : MonoBehaviour
 
     public bool isDialog = false;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,4 +31,6 @@ public class ScionANimationEvents : MonoBehaviour
         }
 
     }
+
+
 }

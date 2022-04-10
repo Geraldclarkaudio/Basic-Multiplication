@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06852227, g: 0.04590448, b: 0.1239763, a: 1}
+  m_IndirectSpecularColor: {r: 0.0942157, g: 0.05793851, b: 0.15136588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1618,7 +1618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 19.597473, y: -33.905884}
+  m_AnchoredPosition: {x: 19.597534, y: -33.905884}
   m_SizeDelta: {x: 0, y: -354.32996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &352173651
@@ -1656,7 +1656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -194, y: -18.164948}
+  m_AnchoredPosition: {x: -194, y: -18.164917}
   m_SizeDelta: {x: 400, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352173653
@@ -4794,6 +4794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbcb804b06de5644ab85efec04e99541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopSpawning: 0
   asteroidContainer: {fileID: 53825217}
   miniScionBot: {fileID: 8772252853993446934, guid: c9270366a46354c41abbd3649afea557,
     type: 3}
@@ -6583,7 +6584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1546382124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8676,6 +8677,7 @@ MonoBehaviour:
   question2Dialog: {fileID: 1609090558}
   question3Dialog: {fileID: 979353377}
   engineBlowout: {fileID: 1634620083}
+  miniBotSpawner: {fileID: 1067254417}
 --- !u!114 &1998514665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8952,7 +8954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4243327588238360, guid: bbad770c80b2db742986dcae1946ab2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.514015
+      value: 14.51402
       objectReference: {fileID: 0}
     - target: {fileID: 4243327588238360, guid: bbad770c80b2db742986dcae1946ab2a, type: 3}
       propertyPath: m_LocalPosition.z

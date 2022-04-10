@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.091626756, g: 0.11468353, b: 0.18938419, a: 1}
+  m_IndirectSpecularColor: {r: 0.10255297, g: 0.123540916, b: 0.20530725, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -624,6 +624,7 @@ GameObject:
   - component: {fileID: 444256473}
   - component: {fileID: 444256472}
   - component: {fileID: 444256471}
+  - component: {fileID: 444256470}
   m_Layer: 5
   m_Name: TeachScionButton
   m_TagString: Untagged
@@ -651,6 +652,19 @@ RectTransform:
   m_AnchoredPosition: {x: -305, y: -38}
   m_SizeDelta: {x: 61.953705, y: 29.746948}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &444256470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444256468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56dd5feef488794a845f2c9a34f7d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  homeBaseScene: EndScene
 --- !u!114 &444256471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +710,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1568895077}
         m_MethodName: ButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 444256470}
+        m_MethodName: BackToHomeBase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2799,6 +2824,7 @@ MonoBehaviour:
   buttonClick: {fileID: 8300000, guid: ad5a96a77d89cec4d9fbbd6455749669, type: 3}
   correctAnswer: {fileID: 0}
   wrongAnswer: {fileID: 0}
+  addPoint: {fileID: 0}
 --- !u!4 &1568895078
 Transform:
   m_ObjectHideFlags: 0

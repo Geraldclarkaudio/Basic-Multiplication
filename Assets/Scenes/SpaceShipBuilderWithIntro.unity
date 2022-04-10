@@ -8575,9 +8575,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 830919269}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1227176776}
+        m_MethodName: ButtonClicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8586,9 +8586,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1227176776}
-        m_MethodName: ButtonClicked
-        m_Mode: 1
+      - m_Target: {fileID: 830919269}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10555,7 +10555,7 @@ MonoBehaviour:
   buttonClick: {fileID: 8300000, guid: ad5a96a77d89cec4d9fbbd6455749669, type: 3}
   correctAnswer: {fileID: 8300000, guid: 514e1c2c7380bc04b9f7908e21426c5e, type: 3}
   wrongAnswer: {fileID: 8300000, guid: cf6364b1ac422454a8b8da8d46784fd2, type: 3}
-  addPoint: {fileID: 0}
+  addPoint: {fileID: 8300000, guid: 44ae8dacb2daed34a952da216739e33e, type: 3}
 --- !u!4 &1227176777
 Transform:
   m_ObjectHideFlags: 0
@@ -11498,6 +11498,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 248033424}
         m_MethodName: ShipBuilt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1227176776}
+        m_MethodName: ButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

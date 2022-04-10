@@ -18,12 +18,15 @@ public class ScionShip : MonoBehaviour
     public GameObject question3Dialog;
     public GameObject engineBlowout;
 
+    public MiniScionBots miniBotSpawner;
+    private Animator anim;
  
 
     private void Start()
     {
         rend = GetComponent<MeshRenderer>();
         animEvents = GetComponent<ScionANimationEvents>();
+        anim = GetComponent<Animator>();
        
     }
 
@@ -34,6 +37,14 @@ public class ScionShip : MonoBehaviour
             animEvents.enabled = true;
         }
 
+        if(miniBotSpawner.botsCount == 0 && miniBotSpawner.isActiveAndEnabled == true)
+        {
+            anim.SetTrigger("Reappear");
+        }
+        if(miniBotSpawner.botsCount == 14 && miniBotSpawner.isActiveAndEnabled == true)
+        {
+            anim.SetTrigger("Disappear");
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

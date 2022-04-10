@@ -16,7 +16,7 @@
 		"HomeBaseIntro3": "I believe the Scion already got their fuel, so bring some fuel tanks. Lets go!",
 		"planetSelectUIText1": "CARGO SHIP",
 		"planetSelectUIText2": "CAVITY PLANET",
-		"planetSelectUIText3": "EMILIA'S PLANET'",
+		"planetSelectUIText3": "EMILIA'S PLANET",
 		"teachScionText":"Teach Scion To Multiply",
 		"cargoShip1": "Thank goodness you're here!",
 		"cargoShip2": "That Scion came and stole our fuel. He said something about having all the fuel means he'll never have to learn multiplication..?",
@@ -109,7 +109,8 @@
 		"shipBuildQuestionCockpit":"Match the following repeated addition equations to their multiplicative equation counterparts.",
 		"shipBuildQuestionBody":"Match the following multiplicative sentences to their description.",
 		"shipBuildQuestionWings":"Match the following multiplicative sentences to their repeated addition counterparts.",
-		"shipBuildQuestionEngine":"Match the following multiplicative sentences to their repeated addition counterparts."
+		"shipBuildQuestionEngine":"Match the following multiplicative sentences to their repeated addition counterparts.",
+		"complete":"COMPLETE"
 
 
 

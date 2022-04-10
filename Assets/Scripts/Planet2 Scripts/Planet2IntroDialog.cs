@@ -16,7 +16,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public TextMeshProUGUI textComponent;
 
         private float canProceed = -1;
-        private float textRate = 1f;
+        private float textRate = 3.5f;
 
         public GameObject mouseClickAnim;
         public GameObject dialogBox;
@@ -36,10 +36,10 @@ namespace PaperKiteStudios.MultiplicationMastermind
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
                 //dialogBox2
-                if (index >= 4)//DIALOG SECTION CUSTOMIZATION
+                if (index == 4)//DIALOG SECTION CUSTOMIZATION
                 {
                     //Show Answer Question UI
-                    mouseClickAnim.SetActive(false);
+                    //mouseClickAnim.SetActive(false);
                     alien.SetActive(false);
                     canProceed = Time.time + 500;
                     goToHangarButton.SetActive(true);
