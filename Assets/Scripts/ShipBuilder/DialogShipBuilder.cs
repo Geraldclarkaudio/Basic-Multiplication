@@ -51,7 +51,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 if(index == 2)
                 {
                     //show the canvas and make the cameras work properly. 
-                    index = 2;
+                   // index = 2;
                     cameraBlend.CockPit();
                     mouseClickAnim.SetActive(false);
                     alien.SetActive(false);

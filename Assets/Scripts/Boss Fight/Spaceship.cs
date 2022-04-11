@@ -26,12 +26,14 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject panel7;
         public GameObject panel8;
         public GameObject panel9;
+
+        private AudioSource audioSOurce;
        
 
         // Start is called before the first frame update
         void Start()
         {
-        
+            audioSOurce = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -98,6 +100,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 {
                     canFire = Time.time + fireRate;
                     Instantiate(laserPrefab, transform.position, Quaternion.identity);
+                    audioSOurce.Play();
                 }
             }
 

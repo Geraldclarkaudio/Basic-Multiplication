@@ -33,24 +33,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             init = GameObject.Find("App").GetComponent<Initializer>();
             StartDialogue();
 
-            if (GameManager.Instance.cargoShipHelped == false) // beginning of game
-            {
-                index = 0;
-            }
 
-            if (GameManager.Instance.cargoShipHelped == true) // Cargo Ship Helped only. 
-            {
-                //display welcome back text
-                index = 3;
-            }
-            if(GameManager.Instance.planet1Helped == true)
-            {
-                index = 6;
-            }
-            if (GameManager.Instance.planet2Helped == true)
-            {
-                index = 9;
-            }
 
         }
 
@@ -62,7 +45,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             {
                 if(index == 2) // end of intro dialog
                 {
-                    index = 2;
+                   // index = 2;
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
@@ -71,7 +54,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                 if(index == 5) //enf of cargoship dialog
                 {
-                    index = 5;
+                   // index = 5;
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
@@ -81,7 +64,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                 if (index == 8) // end of post planet 1 dialog
                 {
-                    index = 8;
+                    //index = 8;
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
@@ -91,7 +74,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                 if (index == 9)
                 {
-                    index = 9;
+                   // index = 9;
                     planetSelectionUI.SetActive(true);
                     scionButton.SetActive(true); // sets end game button to true. 
                     mouseClickAnim.SetActive(false);
@@ -125,6 +108,26 @@ namespace PaperKiteStudios.MultiplicationMastermind
         void StartDialogue()
         {
             index = 0;
+
+            if (GameManager.Instance.cargoShipHelped == false) // beginning of game
+            {
+                index = 0;
+            }
+
+            if (GameManager.Instance.cargoShipHelped == true) // Cargo Ship Helped only. 
+            {
+                //display welcome back text
+                index = 3;
+            }
+            if (GameManager.Instance.planet1Helped == true)
+            {
+                index = 6;
+            }
+            if (GameManager.Instance.planet2Helped == true)
+            {
+                index = 9;
+            }
+
             textComponent.text = init.GetText(lines[index]);
             LOLSDK.Instance.SpeakText(lines[index]);
             canProceed = Time.time + textRate;
@@ -144,6 +147,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     index++;
                     textComponent.text = init.GetText(lines[index]);
                     LOLSDK.Instance.SpeakText(lines[index]);
+                    
+                    Debug.Log("Speakin!");
                 }
                 
             }
