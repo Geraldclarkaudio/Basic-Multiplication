@@ -10,6 +10,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
     {
         public void Comp()
         {
+            AudioManager.Instance.ButtonClicked();
             LOLSDK.Instance.CompleteGame();
         }
     }
