@@ -306,30 +306,32 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 if (scene.name == "HomeBase")
                 {
 
-                        if (GameManager.Instance.cargoShipHelped == false)
-                        {
-                            playerData.level = 2;
-                    LOLSDK.Instance.SubmitProgress(0, 2, 10);
-                        }
-
                         if (GameManager.Instance.cargoShipHelped == true)
                         {
                             playerData.level = 4;
-                    LOLSDK.Instance.SubmitProgress(0, 4, 10);
+                            LOLSDK.Instance.SubmitProgress(0, 4, 10);
+                    return;
                         }
 
                         if (GameManager.Instance.planet1Helped == true)
                         {
                             playerData.level = 6;
-                    LOLSDK.Instance.SubmitProgress(0, 6, 10);
-                        }
+                            LOLSDK.Instance.SubmitProgress(0, 6, 10);
+                    return;
 
-                        if (GameManager.Instance.planet2Helped == true)
+                }
+
+                if (GameManager.Instance.planet2Helped == true)
                         {
                             playerData.level = 10;
-                    LOLSDK.Instance.SubmitProgress(0, 10, 10);
-                        }
+                            LOLSDK.Instance.SubmitProgress(0, 10, 10);
+                    return;
+
                 }
+
+                playerData.level = 2;
+                LOLSDK.Instance.SubmitProgress(0, 2, 10);
+            }
 
             Save();
             }
