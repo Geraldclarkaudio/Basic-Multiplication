@@ -17,7 +17,7 @@
 		"planetSelectUIText1": "CARGO SHIP",
 		"planetSelectUIText2": "CAVITY PLANET",
 		"planetSelectUIText3": "EMILIA'S PLANET",
-		"teachScionText":"Teach Scion To Multiply",
+		"teachScionText": "Teach Scion To Multiply",
 		"cargoShip1": "Thank goodness you're here!",
 		"cargoShip2": "That Scion came and stole our fuel. He said something about having all the fuel means he'll never have to learn multiplication..?",
 		"cargoShip3": "That was weird.",
@@ -38,7 +38,7 @@
 		"welcomeBackToBase2": "We got pencils from the cargo ship. Maybe we can catch the Scion and teach it multiplication!",
 		"welcomeBackToBase3": "Lets get some more supplies from the other 2 planets. First we need to help our reptilian friends on Cavity Planet! Lets go!",
 		"planet1intro1": "Welcome to Cavity Planet.",
-		"planet1intro2": "Depite our name, we take pride in our gorgeous teeth!",
+		"planet1intro2": "Despite our name, we take pride in our gorgeous teeth!",
 		"planet1intro3": "The Scion who has been giving you trouble visited us, but took all of our toothbrushes!",
 		"planet1intro4": "We have 5 families here. Each family has 5 members, so therefore, the Scion stole 25 toothbrushes.",
 		"planet1intro5": "You could also say that we need 5 groups of 5 toothbrushes.",
@@ -47,7 +47,7 @@
 		"wrongAnswerDialogP1": "Hmm. Not exactly. Remember, we have 5 families here with 5 members each.",
 		"wrongAnswerDialogP2": "We need 25 toothbrushes. We can look at this problem like this.",
 		"wrongAnswerDialogP3": "There are 5 groups of people with 5 people per group.",
-		"wrongAnswerDialogP4": "Which mulitiplicative sentence makes the most sense in this situation?",
+		"wrongAnswerDialogP4": "Which multiplicative sentence makes the most sense in this situation?",
 		"correctAnswerDialogP1": "Exactly! 5 X 5 means there are 5 groups of 5!",
 		"correctAnswerDialogP2": "An easy way to remember that is to think of the multiplication symbol as meaning 'groups of'.",
 		"correctAnswerDialogP3": "You did great! Thanks again. Now we can all go back to keeping or teeth nice and sharp and clean!",
@@ -75,9 +75,9 @@
 		"shipBuildButton2": "Body",
 		"shipBuildButton3": "Wings",
 		"shipBuildButton4": "Engines",
-		"scionFight1":"Well well well. It seems you are able to keep up with me even though your ship is so small!",
-		"scionFight2":"Double M, you're doing great.",
-		"scionFight3":"Dont listen to her! You're doing terribly! One of my engines is gone!",
+		"scionFight1": "Well well well. It seems you are able to keep up with me even though your ship is so small!",
+		"scionFight2": "Double M, you're doing great.",
+		"scionFight3": "Dont listen to her! You're doing terribly! One of my engines is gone!",
 		"scionFight4": "We only want to help you! Multiplication is critical to your survival!",
 		"scionFight5": "Lets fix the Scions engine. They have 4 engines total. 2 on either side of the ship. Which multiplicative equation represents 2 groups of 2 engines?",
 		"question1Text": "Which multiplicative equation represents 2 groups of 2 engines?",
@@ -87,7 +87,7 @@
 		"scionFight7": "Keep up the pressure! We're getting the message across. The Scion almost knows how to multiply!",
 		"scionFight8": "I dont think our lasers are getting the message across. We need to double their power!",
 		"scionFight9": "We are firing 1 laser at a time right now. If we double the laser that means we will have 2 lasers firing at once!",
-		"scionFight10": "Determine which mutliplicative sentence best fits this situation? 1 laser becoming 2.",
+		"scionFight10": "Determine which multiplicative sentence best fits this situation? 1 laser becoming 2.",
 		"question2Text": "Which multiplicative sentence means 1 group of 2 lasers?",
 		"question2TextWrong": "Not quite. GIve it another try. Which multiplicative sentence means that we doubled the laser?",
 		"question2TextRight": "Precisely!",
@@ -105,20 +105,13 @@
 		"finalScionDialog": "NO! You destroyed all of my mini bots!",
 		"finalScionDialog2": "Thats right! Just stop running from us! We want to teach you how to multiply. It will make your life so much easier!",
 		"finalScionDialog3": "FINE! I'm going to land it at your Home Base. I'll meet you there.",
-		"welcomeBackToBase7":"We finally got the Scion to agree to learn to multiply. Lets get to work using the paper and pencils we got for helping our neighbors.",
-		"shipBuildQuestionCockpit":"Match the following repeated addition equations to their multiplicative equation counterparts.",
-		"shipBuildQuestionBody":"Match the following multiplicative sentences to their description.",
-		"shipBuildQuestionWings":"Match the following multiplicative sentences to their repeated addition counterparts.",
-		"shipBuildQuestionEngine":"Match the following multiplicative sentences to their repeated addition counterparts.",
-		"complete":"COMPLETE"
-
-
-
-
-
-
-
-
+		"welcomeBackToBase7": "We finally got the Scion to agree to learn to multiply. Lets get to work using the paper and pencils we got for helping our neighbors.",
+		"shipBuildQuestionCockpit": "Match the following repeated addition equations to their multiplicative equation counterparts.",
+		"shipBuildQuestionBody": "Match the following multiplicative sentences to their description.",
+		"shipBuildQuestionWings": "Match the following multiplicative sentences to their repeated addition counterparts.",
+		"shipBuildQuestionEngine": "Match the following multiplicative sentences to their repeated addition counterparts.",
+		"complete": "COMPLETE"
 
 	}
+}
  

@@ -62,6 +62,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             {
                 if(index == 2) // end of intro dialog
                 {
+                    index = 2;
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
@@ -70,6 +71,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                 if(index == 5) //enf of cargoship dialog
                 {
+                    index = 5;
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
@@ -79,6 +81,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                 if (index == 8) // end of post planet 1 dialog
                 {
+                    index = 8;
                     planetSelectionUI.SetActive(true);
                     dialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
@@ -88,6 +91,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
                 if (index == 9)
                 {
+                    index = 9;
                     planetSelectionUI.SetActive(true);
                     scionButton.SetActive(true); // sets end game button to true. 
                     mouseClickAnim.SetActive(false);
@@ -95,8 +99,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     AudioManager.Instance.EndDialogSound();
                     
                 }
-
-                //NEDD PLANET 2 DIALOG
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
@@ -132,9 +134,18 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             if (index < lines.Length - 1)
             {
-                index++;
-                textComponent.text = init.GetText(lines[index]);
-                LOLSDK.Instance.SpeakText(lines[index]);
+                if(index == 2 || index == 5 || index == 8 || index == 9)
+                {
+                    return;
+                }
+
+                else
+                {
+                    index++;
+                    textComponent.text = init.GetText(lines[index]);
+                    LOLSDK.Instance.SpeakText(lines[index]);
+                }
+                
             }
         }
     }

@@ -263,10 +263,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 }
             }
 #endif
-            public void StartedGame()
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
 
             public void SceneChanged()
             {
@@ -282,30 +278,30 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 {
                     playerData.level = 3;
                 LOLSDK.Instance.SubmitProgress(0, 3, 10);
-            }
+                }
 
                 if (scene.name == "Planet1")
                 {
                     playerData.level = 5;
                 LOLSDK.Instance.SubmitProgress(0, 5, 10);
-            }
+                }
 
                 if (scene.name == "Planet3")
                 {
                     playerData.level = 7;
                 LOLSDK.Instance.SubmitProgress(0, 7, 10);
-            }
+                }
                 
                 if(scene.name == "SpaceShipBuilderWithIntro")
                 {
                 playerData.level = 8;
                 LOLSDK.Instance.SubmitProgress(0, 8, 10);
-            }
+                }
                 if (scene.name == "ScionScene")
                 {
                     playerData.level = 9;
                 LOLSDK.Instance.SubmitProgress(0, 9, 10);
-            }
+                }
 
                 if (scene.name == "HomeBase")
                 {
@@ -314,25 +310,25 @@ namespace PaperKiteStudios.MultiplicationMastermind
                         {
                             playerData.level = 2;
                     LOLSDK.Instance.SubmitProgress(0, 2, 10);
-                }
+                        }
 
                         if (GameManager.Instance.cargoShipHelped == true)
                         {
                             playerData.level = 4;
                     LOLSDK.Instance.SubmitProgress(0, 4, 10);
-                }
+                        }
 
                         if (GameManager.Instance.planet1Helped == true)
                         {
                             playerData.level = 6;
                     LOLSDK.Instance.SubmitProgress(0, 6, 10);
-                }
+                        }
 
                         if (GameManager.Instance.planet2Helped == true)
                         {
                             playerData.level = 10;
                     LOLSDK.Instance.SubmitProgress(0, 10, 10);
-                }
+                        }
                 }
 
             Save();

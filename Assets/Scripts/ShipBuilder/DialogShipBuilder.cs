@@ -51,6 +51,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 if(index == 2)
                 {
                     //show the canvas and make the cameras work properly. 
+                    index = 2;
                     cameraBlend.CockPit();
                     mouseClickAnim.SetActive(false);
                     alien.SetActive(false);
@@ -105,9 +106,17 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             if (index < lines.Length - 1)
             {
-                index++;
-                textComponent.text = init.GetText(lines[index]);
-                LOLSDK.Instance.SpeakText(lines[index]);
+                if(index == 2)
+                {
+                    return;
+                }
+                else
+                {
+                    index++;
+                    textComponent.text = init.GetText(lines[index]);
+                    LOLSDK.Instance.SpeakText(lines[index]);
+                }
+                
             }
         }
 
