@@ -110,6 +110,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 {
                     canFire = Time.time + fireRate;
                     Instantiate(doubleLaser, transform.position, Quaternion.identity);
+                    audioSOurce.Play();
                 }
             }
           

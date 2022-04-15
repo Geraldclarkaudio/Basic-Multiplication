@@ -55,7 +55,9 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 DontDestroyOnLoad(this.gameObject);
             }
 #if UNITY_EDITOR
+           
             ILOLSDK sdk = new LoLSDK.MockWebGL();
+         
 #elif UNITY_WEBGL
 		    ILOLSDK sdk = new LoLSDK.WebGL();
 #elif UNITY_IOS || UNITY_ANDROID

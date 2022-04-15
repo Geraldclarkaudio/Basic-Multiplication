@@ -49,11 +49,12 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
             if (correctAnswer == true)
             {
-                //increment index by 1 to make next line happen. 
+                correctAnswer = false;
                 index = 5;
                 i = 5;
-                correctAnswer = false;
-                      
+                textComponent.text = init.GetText(lines[index]);
+                LOLSDK.Instance.SpeakText(lines[index]);
+                canProceed = Time.time + textRate;
             }
 
             switch (i)
@@ -79,10 +80,13 @@ namespace PaperKiteStudios.MultiplicationMastermind
             {
                 if(index ==  4)
                 {
+                    index = 4;
                     //set dialog ins=acrive
                     QuestionPanel.SetActive(true);
                     DialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
+                    index++;
+                    i++;return;
 
                 }
                 if (index == 5)

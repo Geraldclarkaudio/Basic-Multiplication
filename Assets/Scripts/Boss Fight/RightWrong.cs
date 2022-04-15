@@ -84,12 +84,14 @@ namespace PaperKiteStudios.MultiplicationMastermind
         }
         IEnumerator WaitToDeactive2()
         {
+            question2Dialog.correctAnswer = true;
+ 
             yield return new WaitForSeconds(2.0f);
 
             question.SetActive(false);
             //Set the next cutscene active
             dialogBox.SetActive(true);
-            question2Dialog.correctAnswer = true;
+            
 
         }
 

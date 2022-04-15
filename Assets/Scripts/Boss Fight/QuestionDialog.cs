@@ -42,23 +42,31 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             Debug.Log("index is " + index);
 
-            if(correctAnswer == true)
+            if (correctAnswer == true)
             {
-                index = 5;
-                i = 5;
                 correctAnswer = false;
+                i = 5;
+                index = 5;
+                //correctAnswer = false;
+                textComponent.text = init.GetText(lines[index]);
+                LOLSDK.Instance.SpeakText(lines[index]);
+                canProceed = Time.time + textRate;
+                
             }
 
-         switch(i)
+            switch (i)
             {
                 case 0:
                     scionIcon.SetActive(true);
+                   
                     break;
                 case 1:
+                   
                     captainCarlaIcon.SetActive(true);
                     scionIcon.SetActive(false);
                     break;
                 case 2:
+                    
                     scionIcon.SetActive(true);
                     captainCarlaIcon.SetActive(false);
                     break;
@@ -67,11 +75,14 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     scionIcon.SetActive(false);
                     break;
                 case 4:
+                    
                     captainCarlaIcon.SetActive(true);
+                    
                     break;
                 case 5:
                     captainCarlaIcon.SetActive(false);
                     scionIcon.SetActive(true);
+                    
                     break;
                 case 6:
                     captainCarlaIcon.SetActive(true);
@@ -84,25 +95,26 @@ namespace PaperKiteStudios.MultiplicationMastermind
             {
                 if (index == 4)
                 {
-                    index = 5;
-                    i = 5;
+                    index = 4;
                     QuestionPanel.SetActive(true);
                     DialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
+                    index++;
+                    i++; return;
+                    
                 }
+              
 
                 if(index == 6)
                 {
                     DialogPanel.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
-
                 }
 
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
                     NextLine();
-
                     canProceed = Time.time + textRate;
                 }
                 else
@@ -123,21 +135,21 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         void StartDialogue()
         {
-            index = 0;
-            i = 0;
-            textComponent.text = init.GetText(lines[index]);
-            LOLSDK.Instance.SpeakText(lines[index]);
-            canProceed = Time.time + textRate;
-            AudioManager.Instance.DialogSound();
+                index = 0;
+                i = 0;
+                textComponent.text = init.GetText(lines[index]);
+                LOLSDK.Instance.SpeakText(lines[index]);
+                canProceed = Time.time + textRate;
+                AudioManager.Instance.DialogSound();
         }
         void NextLine()
         {
             if (index < lines.Length - 1)
-            {
-                index++;
-                i++;
-                textComponent.text = init.GetText(lines[index]);
-                LOLSDK.Instance.SpeakText(lines[index]);
+            {  
+               index++;
+               i++;
+               textComponent.text = init.GetText(lines[index]);
+               LOLSDK.Instance.SpeakText(lines[index]);  
             }
         }
     }

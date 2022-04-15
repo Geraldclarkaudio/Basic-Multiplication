@@ -8,6 +8,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
     public class Dialog : MonoBehaviour
     {
         private Initializer init;
+        private Fallback fallback;
         public string[] lines;
         private int index;
         private int i;
@@ -36,7 +37,17 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         // Start is called before the first frame update
         void Start()
         {
-            init = GameObject.Find("App").GetComponent<Initializer>();
+
+            if(init == null)
+            {
+                Debug.Log("Aint No Init");
+                fallback = GameObject.Find("Fallback").GetComponent<Fallback>();
+            }
+            else
+            {
+                init = GameObject.Find("App").GetComponent<Initializer>();
+            }
+
             introMusicAnim = GameObject.Find("IntroBGM").GetComponent<Animator>();
             scionMusicAnim = GameObject.Find("ScionBGM").GetComponent<Animator>();
             StartDialogue();          
@@ -108,15 +119,32 @@ namespace PaperKiteStudios.MultiplicationMastermind {
                     AudioManager.Instance.EndDialogSound();
 
                 }
-                if (textComponent.text == init.GetText(lines[index]))
-                {        
-                    NextLine(); 
-                    canProceed = Time.time + textRate;
+                if(init != null)
+                {
+                    if (textComponent.text == init.GetText(lines[index]))
+                    {
+                        NextLine();
+                        canProceed = Time.time + textRate;
+                    }
+                    else
+                    {
+                        textComponent.text = init.GetText(lines[index]);
+                    }
                 }
                 else
                 {
-                    textComponent.text = init.GetText(lines[index]);
+                    if (textComponent.text == fallback.GetText(lines[index]))
+                    {
+                        NextLine();
+                        canProceed = Time.time + textRate;
+                    }
+                    else
+                    {
+                        textComponent.text = fallback.GetText(lines[index]);
+                    }
                 }
+                
+               
             }
 
             if (Time.time >= canProceed)
@@ -133,8 +161,16 @@ namespace PaperKiteStudios.MultiplicationMastermind {
         {
             index = 0;
             i = 0;
-            textComponent.text = init.GetText(lines[index]);
-            LOLSDK.Instance.SpeakText(lines[index]);
+            if(init == null)
+            {
+                textComponent.text = fallback.GetText(lines[index]);
+            }
+            else
+            {
+                textComponent.text = init.GetText(lines[index]);
+                LOLSDK.Instance.SpeakText(lines[index]);
+
+            }
             canProceed = Time.time + textRate;
             AudioManager.Instance.DialogSound();
         }
@@ -144,8 +180,21 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             {
                 index++;
                 i++;
-                textComponent.text = init.GetText(lines[index]);
-                LOLSDK.Instance.SpeakText(lines[index]);
+
+                if (init == null)
+                {
+                    textComponent.text = fallback.GetText(lines[index]);
+                }
+                else
+                {
+                    textComponent.text = init.GetText(lines[index]);
+                    LOLSDK.Instance.SpeakText(lines[index]);
+
+                }
+
+                //textComponent.text = init.GetText(lines[index]);
+ //               LOLSDK.Instance.SpeakText(lines[index]);
+
             }
         }
     }
