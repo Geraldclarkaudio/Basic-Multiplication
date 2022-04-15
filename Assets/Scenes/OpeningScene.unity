@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11116477, g: 0.07727217, b: 0.17963904, a: 1}
+  m_IndirectSpecularColor: {r: 0.07117974, g: 0.04744973, b: 0.12666866, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 630379865}
   - component: {fileID: 630379867}
   - component: {fileID: 630379866}
-  - component: {fileID: 630379868}
+  - component: {fileID: 630379869}
   m_Layer: 5
   m_Name: Dialog Box
   m_TagString: Untagged
@@ -831,7 +831,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630379864}
   m_CullTransparentMesh: 0
---- !u!114 &630379868
+--- !u!114 &630379869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 630379864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094adea868c9d9644b7d88ad05edb22e, type: 3}
+  m_Script: {fileID: 11500000, guid: b9a345729cb4a2647a6813cbb4caa5b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
@@ -852,13 +852,17 @@ MonoBehaviour:
   - openingScene06
   - scionOpening01
   - scionOpening02
-  - openingScene07
+  - openingScene06
+  index: 0
+  i: 0
   textComponent: {fileID: 2059880513}
-  mouseClickAnim: {fileID: 887155020}
+  nextCue: {fileID: 887155020}
+  canProceed: -1
+  textRate: 3.5
+  dialogBox: {fileID: 630379864}
+  homeBaseButton: {fileID: 1072756361}
   captainCarla: {fileID: 347857505}
   scion: {fileID: 1457786529}
-  homeBaseButton: {fileID: 1072756361}
-  dialogBox: {fileID: 630379864}
   introMusic: {fileID: 578871276}
   scionMusic: {fileID: 419189864}
 --- !u!1 &769891293
@@ -996,6 +1000,7 @@ MonoBehaviour:
   buttonClick: {fileID: 8300000, guid: ad5a96a77d89cec4d9fbbd6455749669, type: 3}
   correctAnswer: {fileID: 8300000, guid: 514e1c2c7380bc04b9f7908e21426c5e, type: 3}
   wrongAnswer: {fileID: 8300000, guid: cf6364b1ac422454a8b8da8d46784fd2, type: 3}
+  addPoint: {fileID: 0}
 --- !u!4 &769891296
 Transform:
   m_ObjectHideFlags: 0
