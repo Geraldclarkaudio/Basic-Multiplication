@@ -3,59 +3,77 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CitizenAI : MonoBehaviour
+namespace PaperKiteStudios.MultiplicationMastermind
 {
-    private NavMeshAgent _agent;
-    [SerializeField]
-    private List<Transform> waypoints;
-    public bool reverse = false;
-    public int currentTarget;
 
-    // Start is called before the first frame update
-    void Start()
+    public class CitizenAI : MonoBehaviour
     {
-        _agent = GetComponent<NavMeshAgent>();
-    }
+        private NavMeshAgent _agent;
+        [SerializeField]
+        private List<Transform> waypoints;
+        public bool reverse = false;
+        public int currentTarget;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Movement();
-    }
+        private Animator _anim;
 
-    private void Movement()
-    {
-        if(waypoints.Count > 0 && waypoints[currentTarget] != null)
+        // Start is called before the first frame update
+        void Start()
         {
-            _agent.SetDestination(waypoints[currentTarget].position);
+            _agent = GetComponent<NavMeshAgent>();
+            currentTarget = 1;
+            _anim = GetComponent<Animator>();
         }
 
-        float distance = Vector3.Distance(transform.position, waypoints[currentTarget].position);
-
-        if (distance < 1.0f)
+        // Update is called once per frame
+        void Update()
         {
-            if (reverse == true)
+            if(GameManager.Instance. planet1Helped == false)
             {
-                currentTarget--; //reversing
-
-                if (currentTarget == 0) // if no more current target = begining
-                {
-                    reverse = false;
-                    currentTarget = 0;
-                }
+                Movement();
             }
 
-            else if (reverse == false)
+            else if(GameManager.Instance.planet1Helped == true)
             {
-                currentTarget++; // incrementing 
+                //set animation to be celebratory
+                _anim.SetBool("Helped", true);
+            }
+        }
 
-                if (currentTarget == waypoints.Count - 1) // at the end of list? 
+        private void Movement()
+        {
+            if (waypoints.Count > 0 && waypoints[currentTarget] != null)
+            {
+                _agent.SetDestination(waypoints[currentTarget].position);
+            }
+
+            float distance = Vector3.Distance(transform.position, waypoints[currentTarget].position);
+
+            if (distance < 1.0f)
+            {
+                if (reverse == true)
                 {
-                    reverse = true;
                     currentTarget--;
+
+                    if (currentTarget == 0)
+                    {
+                        reverse = false;
+                        currentTarget = 0;
+                    }
                 }
+                else
+                {
+                    currentTarget++;
+
+                    if (currentTarget == waypoints.Count) //at the end
+                    {
+                        reverse = true;
+                        currentTarget--;
+                    }
+                }
+
             }
+
         }
+
     }
-       
 }
