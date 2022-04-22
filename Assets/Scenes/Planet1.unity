@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.110778265, g: 0.066796936, b: 0.16974208, a: 1}
+  m_IndirectSpecularColor: {r: 0.07117974, g: 0.04744973, b: 0.12666866, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -491,6 +491,49 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &73726593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 73726595}
+  - component: {fileID: 73726594}
+  m_Layer: 0
+  m_Name: LanguageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &73726594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73726593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09ff21ca12bb2649b919be56da2270e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &73726595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73726593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &75712740
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +678,7 @@ GameObject:
   - component: {fileID: 77132098}
   - component: {fileID: 77132100}
   - component: {fileID: 77132099}
+  - component: {fileID: 77132101}
   m_Layer: 5
   m_Name: WrongAnswerPanel
   m_TagString: Untagged
@@ -670,7 +714,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77132097}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fe588310a5b9d24b8b270384fdb70e9, type: 3}
   m_Name: 
@@ -693,6 +737,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77132097}
   m_CullTransparentMesh: 0
+--- !u!114 &77132101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77132097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f48939620665b845bc1969e7b2d8f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - wrongAnswerDialogP1
+  - wrongAnswerDialogP2
+  - wrongAnswerDialogP3
+  - wrongAnswerDialogP4
+  index: 0
+  i: 0
+  textComponent: {fileID: 1061855921}
+  nextCue: {fileID: 1936821279}
+  canProceed: -1
+  textRate: 3.5
+  dialogBox: {fileID: 77132097}
+  scene:
+    m_Handle: 0
 --- !u!1 &94410447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1085,7 @@ GameObject:
   - component: {fileID: 180838958}
   - component: {fileID: 180838959}
   - component: {fileID: 180838960}
+  - component: {fileID: 180838961}
   m_Layer: 5
   m_Name: CorrectAnswerDialog
   m_TagString: Untagged
@@ -1086,7 +1157,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180838954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df1935921fedd4c4eaa43a2fe1ae1ea5, type: 3}
   m_Name: 
@@ -1128,6 +1199,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backToHomeBaseButton: {fileID: 2106000529}
+--- !u!114 &180838961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180838954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b53e92c035b5814481ee7b119f10ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - correctAnswerDialogP1
+  - correctAnswerDialogP2
+  - correctAnswerDialogP3
+  - correctAnswerDialogP4
+  - correctAnswerDialogP5
+  index: 0
+  i: 0
+  textComponent: {fileID: 1276908993}
+  nextCue: {fileID: 1936821279}
+  canProceed: -1
+  textRate: 3.5
+  dialogBox: {fileID: 180838954}
+  alien: {fileID: 2030597012}
+  director: {fileID: 1521186302}
 --- !u!1 &213146222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,6 +1236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 213146223}
   - component: {fileID: 213146224}
+  - component: {fileID: 213146225}
   m_Layer: 5
   m_Name: InstructionPanel
   m_TagString: Untagged
@@ -1173,9 +1272,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213146222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a51b044996d2e147b1ea6ce4e81a4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instructions: planet1instructionalpanel
+  textComponent: {fileID: 786140267}
+--- !u!114 &213146225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213146222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302c1f74602ab864bbf8a594b7818f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   instructions: planet1instructionalpanel
@@ -2575,7 +2688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &523469265
 GameObject:
@@ -3394,7 +3507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &680022441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3419,7 +3532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &689040850 stripped
 Transform:
@@ -4486,7 +4599,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1053959796
 PrefabInstance:
@@ -4712,6 +4825,7 @@ GameObject:
   - component: {fileID: 1167880807}
   - component: {fileID: 1167880806}
   - component: {fileID: 1167880805}
+  - component: {fileID: 1167880811}
   m_Layer: 5
   m_Name: BackToBase_Button
   m_TagString: Untagged
@@ -4759,7 +4873,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167880803}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a51b044996d2e147b1ea6ce4e81a4a6, type: 3}
   m_Name: 
@@ -4887,6 +5001,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167880803}
   m_CullTransparentMesh: 0
+--- !u!114 &1167880811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167880803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302c1f74602ab864bbf8a594b7818f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instructions: backToBase
+  textComponent: {fileID: 1641193857}
 --- !u!1 &1200664360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5967,6 +6095,7 @@ GameObject:
   - component: {fileID: 1312685730}
   - component: {fileID: 1312685729}
   - component: {fileID: 1312685728}
+  - component: {fileID: 1312685731}
   m_Layer: 5
   m_Name: PaperText
   m_TagString: Untagged
@@ -6000,7 +6129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312685726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a51b044996d2e147b1ea6ce4e81a4a6, type: 3}
   m_Name: 
@@ -6104,6 +6233,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312685726}
   m_CullTransparentMesh: 0
+--- !u!114 &1312685731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312685726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302c1f74602ab864bbf8a594b7818f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instructions: paperObtained
+  textComponent: {fileID: 1312685729}
 --- !u!1 &1322955210
 GameObject:
   m_ObjectHideFlags: 0
@@ -8188,7 +8331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1528584766
 GameObject:
@@ -8653,7 +8796,7 @@ Transform:
   m_Children:
   - {fileID: 558707236}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 30.97406, y: 66.48589, z: -0.001309438}
 --- !u!95 &1612749956
 Animator:
@@ -11001,6 +11144,7 @@ GameObject:
   - component: {fileID: 1807100217}
   - component: {fileID: 1807100216}
   - component: {fileID: 1807100218}
+  - component: {fileID: 1807100219}
   m_Layer: 5
   m_Name: Dialog Box
   m_TagString: Untagged
@@ -11072,7 +11216,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807100214}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d608f353ce36f947a66ad2dfd4a1e44, type: 3}
   m_Name: 
@@ -11086,6 +11230,36 @@ MonoBehaviour:
   - planet1intro6
   textComponent: {fileID: 114203490}
   mouseClickAnim: {fileID: 1936821279}
+  dialogBox: {fileID: 1807100214}
+  alien: {fileID: 2030597012}
+  answerQuestionUI: {fileID: 1924495933}
+  director: {fileID: 1034980484}
+  cam2: {fileID: 0}
+--- !u!114 &1807100219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807100214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e5fc7e115984f4cb470e843e098c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - planet1intro1
+  - planet1intro2
+  - planet1intro3
+  - planet1intro4
+  - planet1intro5
+  - planet1intro6
+  index: 0
+  i: 0
+  textComponent: {fileID: 114203490}
+  nextCue: {fileID: 1936821279}
+  canProceed: -1
+  textRate: 3.5
   dialogBox: {fileID: 1807100214}
   alien: {fileID: 2030597012}
   answerQuestionUI: {fileID: 1924495933}
@@ -11333,7 +11507,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1936821279
 GameObject:
@@ -11727,12 +11901,12 @@ PrefabInstance:
     - target: {fileID: 6466258410036408084, guid: cc130aa75797fb949841f7ab7266a9cd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6466258410036408086, guid: cc130aa75797fb949841f7ab7266a9cd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6466258410036408086, guid: cc130aa75797fb949841f7ab7266a9cd,
         type: 3}
@@ -12061,7 +12235,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2138885336
 PrefabInstance:

@@ -32,9 +32,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
             StartDialogue();
-
-
-
         }
 
             private void Update()

@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 4224276455
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b7883c4dd7cc8bc502100c7daf81b76e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/fallBackLang.json
+Dependencies: []

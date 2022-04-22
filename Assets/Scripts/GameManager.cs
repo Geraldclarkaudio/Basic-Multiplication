@@ -7,6 +7,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
     
     public class GameManager : MonoBehaviour
     {
+
         private static GameManager _instance;
         public static GameManager Instance
         {
@@ -19,7 +20,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 return _instance;
             }
         }
-
         public bool cargoShipHelped { get; set; }
         public bool planet1Helped { get; set; }
         public bool planet2Helped { get; set; }
@@ -30,11 +30,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public bool wingsBuilt { get; set; }
 
         public bool shipComplete { get; set; }
-
-
-
-
-
 
         private void Awake()
         {
