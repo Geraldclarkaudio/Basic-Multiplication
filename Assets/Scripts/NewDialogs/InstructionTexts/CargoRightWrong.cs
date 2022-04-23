@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class CargoRightWrong : NotLOLDialogClass
+    public class CargoRightWrong : DialogClass
     { 
         public Scene scene;
 

@@ -33,7 +33,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             hoverItem = this;
         }
 
-        public void OnPointerUp(PointerEventData eventData)
+        public void OnPointerUp(PointerEventData eventData)//SOMETHING IS WRONG HERE
         {
             if(!this.Equals(hoverItem) && itemName.Equals(hoverItem.itemName))
 

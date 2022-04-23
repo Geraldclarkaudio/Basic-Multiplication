@@ -8,7 +8,7 @@ using TMPro;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class P1Correct : NotLOLDialogClass
+    public class P1Correct : DialogClass
     {
         public GameObject alien;
         public GameObject director;

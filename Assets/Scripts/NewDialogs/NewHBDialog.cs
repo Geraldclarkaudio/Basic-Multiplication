@@ -12,9 +12,30 @@ namespace PaperKiteStudios.MultiplicationMastermind {
 
         private LanguageManager languageManager;
 
+        public void Awake()
+        {
+            if (GameManager.Instance.cargoShipHelped == false) // beginning of game
+            {
+                index = 0;
+            }
+
+            if (GameManager.Instance.cargoShipHelped == true) // Cargo Ship Helped only. 
+            {
+                //display welcome back text
+                index = 3;
+            }
+            if (GameManager.Instance.planet1Helped == true)
+            {
+                index = 6;
+            }
+            if (GameManager.Instance.planet2Helped == true)
+            {
+                index = 9;
+            }
+        }
         public override void Start()
         {
-            StartDialogue();
+            base.Start();
         }
 
         public override void Update()
@@ -57,34 +78,6 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             }
             base.Update();
 
-        }
-
-        public override void StartDialogue()
-        {
-            
-            if (GameManager.Instance.cargoShipHelped == false) // beginning of game
-            {
-                index = 0;
-            }
-
-            if (GameManager.Instance.cargoShipHelped == true) // Cargo Ship Helped only. 
-            {
-                //display welcome back text
-                index = 3;
-            }
-            if (GameManager.Instance.planet1Helped == true)
-            {
-                index = 6;
-            }
-            if (GameManager.Instance.planet2Helped == true)
-            {
-                index = 9;
-            }
-            index = 0;
-
-            textComponent.text = languageManager.GetText(lines[index]);
-            canProceed = Time.time + textRate;
-            AudioManager.Instance.DialogSound();
         }
     }
 }

@@ -2378,7 +2378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1426057530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3112,7 +3112,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1694598232}
   - component: {fileID: 1694598233}
-  - component: {fileID: 1694598234}
   m_Layer: 5
   m_Name: Avatar Welcome Dialog
   m_TagString: Untagged
@@ -3148,7 +3147,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694598231}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1021e58dfa6b9d24894ec9165d65c28c, type: 3}
   m_Name: 
@@ -3171,40 +3170,6 @@ MonoBehaviour:
   dialogBox: {fileID: 1872485323}
   planetSelectionUI: {fileID: 1786082398}
   scionButton: {fileID: 444256468}
---- !u!114 &1694598234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694598231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a8472036daabd34f9418ef3654b2927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lines:
-  - HomeBaseIntro1
-  - HomeBaseIntro2
-  - HomeBaseIntro3
-  - welcomeBackToBase1
-  - welcomeBackToBase2
-  - welcomeBackToBase3
-  - welcomeBackToBase4
-  - welcomeBackToBase5
-  - welcomeBackToBase6
-  - welcomeBackToBase7
-  index: 0
-  i: 0
-  textComponent: {fileID: 1927462158}
-  nextCue: {fileID: 2103731714}
-  canProceed: -1
-  textRate: 3.5
-  dialogBox: {fileID: 1872485323}
-  dialogPanel: {fileID: 1694598231}
-  avatar: {fileID: 147721421}
-  planetSelectionUI: {fileID: 1786082398}
-  scionButton: {fileID: 444256468}
 --- !u!1 &1786082398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,7 +3182,6 @@ GameObject:
   - component: {fileID: 1786082400}
   - component: {fileID: 1786082401}
   - component: {fileID: 1786082402}
-  - component: {fileID: 1786082403}
   m_Layer: 5
   m_Name: DESTINATION BUTTONS
   m_TagString: Untagged
@@ -3255,7 +3219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786082398}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60184112c94d8a340bae250b73719e19, type: 3}
   m_Name: 
@@ -3305,22 +3269,6 @@ MonoBehaviour:
   planet2CheckMarkBox: {fileID: 953986780}
   checkMarkOff: {fileID: 21300000, guid: 34bbda742ce5899418d4879b211430c6, type: 3}
   checkMarkOn: {fileID: 21300000, guid: db1041913bec4c7488a9b692829990b6, type: 3}
---- !u!114 &1786082403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786082398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f69aff116e6fc4c9dd21181008786e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cargoShipButton: {fileID: 351782216}
-  planet2Button: {fileID: 1310432421}
-  planet3Button: {fileID: 164427115}
-  teachScionButton: {fileID: 1101839298}
 --- !u!1 &1872485323
 GameObject:
   m_ObjectHideFlags: 0

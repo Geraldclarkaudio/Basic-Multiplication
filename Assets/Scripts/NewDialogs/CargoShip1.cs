@@ -8,7 +8,7 @@ using TMPro;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class CargoShip1 : NotLOLDialogClass
+    public class CargoShip1 : DialogClass
     {
         
         public GameObject alien;

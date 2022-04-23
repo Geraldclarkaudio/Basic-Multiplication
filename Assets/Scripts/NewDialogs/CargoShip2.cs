@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class CargoShip2 : NotLOLDialogClass
+    public class CargoShip2 : DialogClass   
     {
         public GameObject alien;
         public GameObject answerQuestionUI;

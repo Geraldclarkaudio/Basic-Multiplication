@@ -20,6 +20,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 return _instance;
             }
         }
+
+        private Initializer init;
         public bool cargoShipHelped { get; set; }
         public bool planet1Helped { get; set; }
         public bool planet2Helped { get; set; }
@@ -40,8 +42,14 @@ namespace PaperKiteStudios.MultiplicationMastermind
             else
             {
                 _instance = this;
+                init = GameObject.Find("App").GetComponent<Initializer>();
                 DontDestroyOnLoad(this.gameObject);
             }
+        }
+
+        private void Update()
+        {
+            
         }
     }
 }

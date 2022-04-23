@@ -22,7 +22,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         [SerializeField]
         protected float canProceed = -1;
         [SerializeField]
-        protected float textRate = 3.5f; //forces text to wait 3.5 seconds
+        protected float textRate = 1f; //forces text to wait 3.5 seconds
         [SerializeField]
         protected GameObject dialogBox;
 
