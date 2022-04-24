@@ -20,6 +20,15 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public void OnDrag(PointerEventData eventData)
         {
             UpdateLine(eventData.position);
+
+            if (eventData.pointerEnter != itemName.Equals(hoverItem.itemName))
+            {
+                Debug.Log("Nope");
+            }
+            if (eventData.pointerEnter == itemName.Equals(hoverItem.itemName))
+            {
+                Debug.Log("Yep");
+            }
         }
 
         public void OnPointerDown(PointerEventData eventData)
@@ -38,11 +47,10 @@ namespace PaperKiteStudios.MultiplicationMastermind
             if(!this.Equals(hoverItem) && itemName.Equals(hoverItem.itemName))
 
             {
-                    UpdateLine(hoverItem.transform.position);
+                UpdateLine(hoverItem.transform.position);
                 MatchLogic.AddPoint();
-
                 Destroy(hoverItem);
-                    Destroy(this);
+                Destroy(this);
             }
             else
             {
@@ -58,5 +66,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
             line.transform.localScale = new Vector3(direction.magnitude / canvas.scaleFactor, 1, 1);
         }
+
+      
     }
 }

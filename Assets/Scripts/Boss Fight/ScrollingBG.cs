@@ -10,7 +10,7 @@ public class ScrollingBG : MonoBehaviour
     [SerializeField]
     private GameObject backgroundPrefab;
 
-    private Vector3 startPos = new Vector3(-294, 0, 0);
+    private Vector3 startPos = new Vector3(-294, 0, 10);
     private Vector3 killPos = new Vector3(171.7f, 0, 0);
     private Vector3 createPos = new Vector3(-50, 0, 0);
 
@@ -27,7 +27,7 @@ public class ScrollingBG : MonoBehaviour
             Instantiate(backgroundPrefab, startPos, Quaternion.identity);
             hasSpawned = true;
         }
-        if(transform.position.x <= 171.7f)
+        if(transform.position.x >= 171.7f)
         {
             Destroy(this.gameObject);
         }

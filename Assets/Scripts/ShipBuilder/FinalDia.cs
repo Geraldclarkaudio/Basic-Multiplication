@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-    public class DialogShipBuilder : MonoBehaviour
+    public class FinalDia : MonoBehaviour
     {
         private Initializer init;
         public string[] lines;
@@ -22,7 +22,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
         public GameObject mouseClickAnim;
         public GameObject dialogCanvas;
         public GameObject alien;
-        private CameraBlend cameraBlend;
 
         public string sceneToLoad;
         public GameObject fadeout;
@@ -30,10 +29,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
         private void Start()
         {
             init = GameObject.Find("App").GetComponent<Initializer>();
-            cameraBlend = GameObject.Find("CM StateDrivenCamera1").GetComponent<CameraBlend>();
-
-            
-
             StartDialogue();
 
         }
@@ -44,24 +39,10 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
-                if(index == 2)
-                {
-                    //show the canvas and make the cameras work properly. 
-                   
-                    dialogCanvas.SetActive(false);
-                    cameraBlend.CockPit();
-                    mouseClickAnim.SetActive(false);
-                    alien.SetActive(false);
-                    AudioManager.Instance.EndDialogSound();
-
-                }
-
-                if (index == 4)
-                {
-                    //fade out and move on to next scene. 
+                if (index == 1)
+                { 
                     StartCoroutine(LoadNextScene());
                     fadeout.SetActive(true);
-
                     GameManager.Instance.planet2Helped = true;
                     AudioManager.Instance.EndDialogSound();
                 }
@@ -102,7 +83,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             {
                 index++;
                 textComponent.text = init.GetText(lines[index]);
-                LOLSDK.Instance.SpeakText(lines[index]);         
+                LOLSDK.Instance.SpeakText(lines[index]);
             }
         }
 
@@ -110,7 +91,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             yield return new WaitForSeconds(2.5f);
             SceneManager.LoadScene(sceneToLoad);
-            
+
         }
 
     }
