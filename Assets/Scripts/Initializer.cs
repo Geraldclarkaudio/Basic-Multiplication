@@ -88,7 +88,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         private void Update()
         {
-            Debug.Log("PLAYERDATA.LEVEL = " + playerData.level);
+            //Debug.Log("PLAYERDATA.LEVEL = " + playerData.level);
         }
 
         IEnumerator WaitToLoad()
@@ -127,7 +127,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 return;
 
             JSONNode startGamePayload = JSON.Parse(startGameJSON);
-            Debug.Log("StartGame()Called");
+           // Debug.Log("StartGame()Called");
 
             // Capture the language code from the start payload. Use this to switch fonts
             _langCode = startGamePayload["languageCode"];
@@ -139,7 +139,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             if (string.IsNullOrEmpty(langJSON))
                 return;
-            Debug.Log("LangUpdate()");
+            //Debug.Log("LangUpdate()");
             _langNode = JSON.Parse(langJSON);
 
             TextDisplayUpdate();
@@ -226,9 +226,9 @@ namespace PaperKiteStudios.MultiplicationMastermind
             if (playerData.level == 10)
             {
                 loadedPlayerData.level = 10;
-                GameManager.Instance.cargoShipHelped = true;
-                GameManager.Instance.planet1Helped = true;
-                GameManager.Instance.planet2Helped = true;
+                //GameManager.Instance.cargoShipHelped = true;
+                //GameManager.Instance.planet1Helped = true;
+                //GameManager.Instance.planet2Helped = true;
                 SceneManager.LoadScene("HomeBase");
                 Save();
             }
@@ -297,7 +297,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     LOLSDK.Instance.SubmitProgress(0, 7, 10);
                 }
 
-                if (scene.name == "SpaceShipBuilderWithIntro")
+                if (scene.name == "SpaceShipBuilderWithIntroDifferentButtonLayout")
                 {
                     playerData.level = 8;
                     LOLSDK.Instance.SubmitProgress(0, 8, 10);
@@ -311,14 +311,14 @@ namespace PaperKiteStudios.MultiplicationMastermind
                 if (scene.name == "HomeBase")
                 {
 
-                    if (GameManager.Instance.cargoShipHelped == true)
+                    if (GameManager.Instance.cargoShipHelped == true && GameManager.Instance.planet1Helped == false && GameManager.Instance.planet2Helped == false)
                     {
                         playerData.level = 4;
                         LOLSDK.Instance.SubmitProgress(0, 4, 10);
                        // return;
                     }
 
-                    if (GameManager.Instance.planet1Helped == true && GameManager.Instance.cargoShipHelped == true)
+                    if (GameManager.Instance.planet1Helped == true && GameManager.Instance.cargoShipHelped == true && GameManager.Instance.planet2Helped == false)
                     {
                         playerData.level = 6;
                         LOLSDK.Instance.SubmitProgress(0, 6, 10);

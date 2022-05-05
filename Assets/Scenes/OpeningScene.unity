@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14267263, g: 0.09111757, b: 0.21210903, a: 1}
+  m_IndirectSpecularColor: {r: 0.06657853, g: 0.04615973, b: 0.12225924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -897,7 +897,7 @@ MonoBehaviour:
   textComponent: {fileID: 2059880513}
   nextCue: {fileID: 887155020}
   canProceed: -1
-  textRate: 1
+  textRate: 3.5
   dialogBox: {fileID: 630379864}
   homeBaseButton: {fileID: 1072756361}
   captainCarla: {fileID: 347857505}
