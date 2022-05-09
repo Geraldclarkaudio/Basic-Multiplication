@@ -13,7 +13,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
     {
         private Initializer init;
         public string[] lines;
-        private int index;
+        public int index;
         public TextMeshProUGUI textComponent;
 
         private float canProceed = -1;
@@ -32,7 +32,8 @@ namespace PaperKiteStudios.MultiplicationMastermind
             init = GameObject.Find("App").GetComponent<Initializer>();
             cameraBlend = GameObject.Find("CM StateDrivenCamera1").GetComponent<CameraBlend>();
 
-       
+            
+
             StartDialogue();
 
         }
@@ -41,22 +42,16 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             Debug.Log("Index: " + index);
 
-            if(index == 2 && GameManager.Instance.shipComplete == true)
-            {
-                index = 3;
-            }
-
             if (Input.GetMouseButtonDown(0) && Time.time > canProceed)
             {
                 if(index == 2)
                 {
                     //show the canvas and make the cameras work properly. 
-                   // index = 2;
+                   
+                    dialogCanvas.SetActive(false);
                     cameraBlend.CockPit();
                     mouseClickAnim.SetActive(false);
                     alien.SetActive(false);
-                    canProceed = Time.time + 500;
-                    dialogCanvas.SetActive(false);
                     AudioManager.Instance.EndDialogSound();
 
                 }
@@ -70,7 +65,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
                     GameManager.Instance.planet2Helped = true;
                     AudioManager.Instance.EndDialogSound();
                 }
-                
 
                 if (textComponent.text == init.GetText(lines[index]))
                 {
@@ -106,17 +100,9 @@ namespace PaperKiteStudios.MultiplicationMastermind
         {
             if (index < lines.Length - 1)
             {
-                if(index == 2)
-                {
-                    return;
-                }
-                else
-                {
-                    index++;
-                    textComponent.text = init.GetText(lines[index]);
-                    LOLSDK.Instance.SpeakText(lines[index]);
-                }
-                
+                index++;
+                textComponent.text = init.GetText(lines[index]);
+                LOLSDK.Instance.SpeakText(lines[index]);         
             }
         }
 

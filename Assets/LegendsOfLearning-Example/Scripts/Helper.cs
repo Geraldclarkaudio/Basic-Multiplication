@@ -40,8 +40,7 @@ namespace LoLSDK
 
             {
                 if (state != null)
-                {
-
+                { 
                     // Hook up and show continue only if valid data exists.
                     continueButton.onClick.AddListener(() =>
                     {
@@ -59,8 +58,24 @@ namespace LoLSDK
                     else if (state.currentProgress >= 1)
                     {
                         continueButton.gameObject.SetActive(true);
+
+                        if(state.currentProgress == 4)
+                        {
+                            GameManager.Instance.cargoShipHelped = true;
+                        }
+                        if (state.currentProgress == 6)
+                        {
+                            GameManager.Instance.cargoShipHelped = true;
+                            GameManager.Instance.planet1Helped = true;
+                        }
+                        if (state.currentProgress == 9 || state.currentProgress == 10)
+                        {
+                            GameManager.Instance.cargoShipHelped = true;
+                            GameManager.Instance.planet1Helped = true;
+                            GameManager.Instance.planet2Helped = true;
+                        }
                     }
-                    //continueButton.gameObject.SetActive(true);
+                    
                 }
 
                 newGameButton.gameObject.SetActive(true);

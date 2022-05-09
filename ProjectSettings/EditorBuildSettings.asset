@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartUp.unity
     guid: 064c69edcd7cf514eba7f77638a28972
   - enabled: 1
+    path: Assets/Scenes/PLAY GAME.unity
+    guid: 92d3db9e4c19e8c4683315d10d871ca5
+  - enabled: 1
     path: Assets/Scenes/OpeningScene.unity
     guid: c7b208ab97999ff4cb4943ddd202f8a5
   - enabled: 1
@@ -24,8 +27,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Planet3.unity
     guid: 5b1f4ec79cf12aa41b84d867820d3be7
   - enabled: 1
-    path: Assets/Scenes/SpaceShipBuilderWithIntro.unity
-    guid: 24ff7dcda0b27844db0fefe081715946
+    path: Assets/Scenes/SpaceShipBuilderWithIntroDifferentButtonLayout.unity
+    guid: 24289c49af2685d45b4980fec98d8363
   - enabled: 1
     path: Assets/Scenes/ScionScene.unity
     guid: a7fce8e167cf7b245ac0c958c6c48542

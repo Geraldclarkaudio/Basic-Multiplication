@@ -15,16 +15,10 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         private void Start()
         {
-        
                 Scene scene = SceneManager.GetActiveScene();
-                Debug.Log("Active Scene is " + scene.name);
-
+               // Debug.Log("Active Scene is " + scene.name);
                 init = GameObject.Find("App").GetComponent<Initializer>();
-
                 init.SceneChanged();
-          
-    
-
         }
 
     }

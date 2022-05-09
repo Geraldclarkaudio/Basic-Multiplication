@@ -6,7 +6,6 @@ using TMPro;
 
 namespace PaperKiteStudios.MultiplicationMastermind
 {
-
     public class InstructionalText : MonoBehaviour
     {
         private Initializer init;

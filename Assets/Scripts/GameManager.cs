@@ -7,6 +7,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
     
     public class GameManager : MonoBehaviour
     {
+
         private static GameManager _instance;
         public static GameManager Instance
         {
@@ -20,6 +21,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             }
         }
 
+        private Initializer init;
         public bool cargoShipHelped { get; set; }
         public bool planet1Helped { get; set; }
         public bool planet2Helped { get; set; }
@@ -31,11 +33,6 @@ namespace PaperKiteStudios.MultiplicationMastermind
 
         public bool shipComplete { get; set; }
 
-
-
-
-
-
         private void Awake()
         {
             if(_instance != null && _instance != this)
@@ -45,8 +42,14 @@ namespace PaperKiteStudios.MultiplicationMastermind
             else
             {
                 _instance = this;
+                init = GameObject.Find("App").GetComponent<Initializer>();
                 DontDestroyOnLoad(this.gameObject);
             }
+        }
+
+        private void Update()
+        {
+            
         }
     }
 }

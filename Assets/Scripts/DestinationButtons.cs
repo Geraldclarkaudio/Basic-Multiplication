@@ -44,6 +44,7 @@ namespace PaperKiteStudios.MultiplicationMastermind {
             if(GameManager.Instance.planet1Helped == true)
             {
                 //Cant go back to Scene again
+                cargoShipButton.interactable = false;
                 planet1ButtonInteract.interactable = false;
                 //put check mark 
                 planet1CheckMarkBox.GetComponent<Image>().sprite = checkMarkOn;
@@ -52,6 +53,8 @@ namespace PaperKiteStudios.MultiplicationMastermind {
 
             if(GameManager.Instance.planet2Helped == true)
             {
+                cargoShipButton.interactable = false;
+                planet1ButtonInteract.interactable = false;
                 planet2ButtonInteract.interactable = false;
                 planet2CheckMarkBox.GetComponent<Image>().sprite = checkMarkOn;
             }
