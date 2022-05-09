@@ -258,7 +258,7 @@ namespace PaperKiteStudios.MultiplicationMastermind
             }
 
             // Load Dev Language File from StreamingAssets
-            string langFilePath = Path.Combine(Application.streamingAssetsPath, "language.json");
+            string langFilePath = Path.Combine(Application.streamingAssetsPath, "language 1.json");
             if (File.Exists(langFilePath))
             {
                 string langDataAsJson = File.ReadAllText(langFilePath);
